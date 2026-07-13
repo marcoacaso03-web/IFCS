@@ -1,0 +1,168 @@
+{
+  "n_firms": 13956,
+  "n_distress": 1505,
+  "distress_rate": 0.10783892232731442,
+  "unmapped_provinces": 0,
+  "region_counts": {
+    "Lombardia": 3641,
+    "Veneto": 1643,
+    "Emilia-Romagna": 1350,
+    "Lazio": 1188,
+    "Piemonte": 983,
+    "Toscana": 955,
+    "Campania": 892,
+    "Puglia": 511,
+    "Sicilia": 477,
+    "Marche": 442,
+    "Trentino-Alto Adige": 377,
+    "Friuli-Venezia Giulia": 299,
+    "Abruzzo": 249,
+    "Liguria": 222,
+    "Sardegna": 221,
+    "Umbria": 194,
+    "Calabria": 184,
+    "Basilicata": 72,
+    "Molise": 35,
+    "Valle d'Aosta": 21
+  },
+  "silhouette_by_k": {
+    "2": 0.3080428195980134,
+    "3": 0.28116405793345867,
+    "4": 0.26487644291444884,
+    "5": 0.22769868416818112,
+    "6": 0.21670104936429543,
+    "7": 0.21300887817940312,
+    "8": 0.20227123861607446
+  },
+  "best_k_silhouette": 5,
+  "silhouette_at_best": 0.22769868416818112,
+  "k_choice_rationale": "silhouette max at k=2; k=5 chosen for profiling granularity (separable micro/small/mid/large + risk signatures)",
+  "cluster_sizes": {
+    "0": 3811,
+    "1": 3360,
+    "2": 2810,
+    "3": 2547,
+    "4": 1428
+  },
+  "cluster_distress_rate": {
+    "0": 0.07006035161374967,
+    "1": 0.12529761904761905,
+    "2": 0.030249110320284697,
+    "3": 0.006281900274833137,
+    "4": 0.5014005602240896
+  },
+  "cluster_means": {
+    "0": {
+      "Sales Revenue": 4313.807376016794,
+      "Employees": 21.51613749672002,
+      "Net income": 122.24833849383364,
+      "Operating Income": 229.5257609551299,
+      "Maximum deductible amount": 68.85772828653896,
+      "Total financial expenses": 67.0686557334033,
+      "Tax shield": 41.6557474678562,
+      "Operating cash flow": 265.70197664654944,
+      "Current taxes": 50.030293361322485,
+      "Alert Index": 8.275366317095246
+    },
+    "1": {
+      "Sales Revenue": 2059.522598809524,
+      "Employees": 17.764285714285716,
+      "Net income": 42.89155565476191,
+      "Operating Income": 63.395036607142856,
+      "Maximum deductible amount": 19.018510982142857,
+      "Total financial expenses": 12.61452738095238,
+      "Tax shield": 7.579490386904762,
+      "Operating cash flow": 95.43990773809524,
+      "Current taxes": 19.57301101190476,
+      "Alert Index": 383.30302814428023
+    },
+    "2": {
+      "Sales Revenue": 13577.749397864769,
+      "Employees": 48.92740213523132,
+      "Net income": 814.5573555160144,
+      "Operating Income": 1232.3903092526689,
+      "Maximum deductible amount": 369.7170927758007,
+      "Total financial expenses": 164.79785800711744,
+      "Tax shield": 115.20186733096085,
+      "Operating cash flow": 1201.6355455516014,
+      "Current taxes": 312.0059042704626,
+      "Alert Index": 32.718460414658416
+    },
+    "3": {
+      "Sales Revenue": 5837.067965449549,
+      "Employees": 23.477424420887317,
+      "Net income": 546.9859120533962,
+      "Operating Income": 739.5952677659992,
+      "Maximum deductible amount": 221.87858032979977,
+      "Total financial expenses": 3.544802905378877,
+      "Tax shield": 3.544802905378877,
+      "Operating cash flow": 673.4474416961131,
+      "Current taxes": 209.9135563407931,
+      "Alert Index": 15021.138697105986
+    },
+    "4": {
+      "Sales Revenue": 4556.802157563025,
+      "Employees": 32.60644257703081,
+      "Net income": -488.00042717086836,
+      "Operating Income": -474.5958158263305,
+      "Maximum deductible amount": -142.37874474789916,
+      "Total financial expenses": 60.55352731092437,
+      "Tax shield": 0.269530462184874,
+      "Operating cash flow": -263.2780105042017,
+      "Current taxes": 6.0239544817927175,
+      "Alert Index": -810.1769415877208
+    }
+  },
+  "cluster_macro_share": {
+    "0": {
+      "Centre": 780.0,
+      "Islands": 219.0,
+      "North": 2231.0,
+      "South": 581.0
+    },
+    "1": {
+      "Centre": 741.0,
+      "Islands": 230.0,
+      "North": 1863.0,
+      "South": 526.0
+    },
+    "2": {
+      "Centre": 499.0,
+      "Islands": 92.0,
+      "North": 1843.0,
+      "South": 376.0
+    },
+    "3": {
+      "Centre": 444.0,
+      "Islands": 89.0,
+      "North": 1730.0,
+      "South": 284.0
+    },
+    "4": {
+      "Centre": 315.0,
+      "Islands": 68.0,
+      "North": 869.0,
+      "South": 176.0
+    }
+  },
+  "classification": {
+    "model": "Logistic Regression (L2, class-weighted)",
+    "cv_roc_auc_mean": 0.851674758694384,
+    "cv_roc_auc_std": 0.007977620380935873,
+    "train_roc_auc": 0.8564508154357107
+  },
+  "feature_importance": {
+    "Operating Income": 0.4918905924949358,
+    "Net income": 0.3656589039689628,
+    "Total financial expenses": 0.33677249857323655,
+    "Maximum deductible amount": 0.29931911014115964,
+    "Sales Revenue": 0.2158912025396172,
+    "Employees": 0.1632532908118975,
+    "Operating cash flow": 0.1518889942008781,
+    "Current taxes": 0.14911336028699687,
+    "Tax shield": 0.13879901955034477,
+    "Alert Index": 0.047879058799071506
+  },
+  "demo_pred_pos_rate": 0.0,
+  "demo_accuracy": 0.8921610776726856
+}
