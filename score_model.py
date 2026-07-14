@@ -16,14 +16,16 @@ TRAIN = "train.csv"
 LOG_FEATS = ["Sales Revenue", "Employees", "Net income", "Operating Income",
              "Maximum deductible amount", "Total financial expenses", "Tax shield",
              "Operating cash flow", "Current taxes"]
-FEATS = ["Sales Revenue", "Employees", "Net income", "Operating Income",
-         "Total financial expenses"]  # 5 non-derived, significant predictors
+FEATS = ["Operating Income", "Net income", "Total financial expenses",
+         "Rev_per_Employee"]  # 4 non-derived, economically-distinct, significant predictors
 
 def prep(d):
     d = d.copy()
     d["Alert Index"] = pd.to_numeric(d["Alert Index"], errors="coerce").fillna(0.0)
+    d["Rev_per_Employee"] = d["Sales Revenue"] / d["Employees"].clip(lower=1)
     for c in LOG_FEATS:
         d[c] = np.log1p(d[c].clip(lower=0))
+    d["Rev_per_Employee"] = np.log1p(d["Rev_per_Employee"].clip(lower=0))
     return d[FEATS].values.astype(float)
 
 def weighted_logloss(w, X, y, sw):

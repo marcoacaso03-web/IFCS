@@ -305,22 +305,27 @@ metrics["multicollinearity"] = {
              "'Tax shield' is mechanically derived from 'Total financial expenses' (r=0.80). "
              "Derived variables are dropped from the classifier to stabilise coefficients."),
 }
-# Cleaned predictor set: drop derived/redundant/non-significant variables.
-# Removed: Maximum deductible amount (VIF 204, derived from Op Income),
-#          Tax shield (derived from Total financial expenses, r=0.80),
-#          Alert Index (= Net income / Total financial expenses, r=0.95),
-#          Current taxes (collinear with Operating Income, r=0.87),
-#          Operating cash flow (Wald p=0.55, non-significant once Op/Net income are in).
-# Kept 5 non-derived, significant predictors (CV AUC highest at 0.846).
-PRED_FEATS = ["Sales Revenue", "Employees", "Net income", "Operating Income",
-              "Total financial expenses"]
+# Productivity feature: Sales Revenue per Employee (captures labour efficiency,
+# orthogonal to pure size; Employees alone is only borderline significant).
+df["Rev_per_Employee"] = df["Sales Revenue"] / df["Employees"].clip(lower=1)
+
+# Cleaned predictor set: 4 non-derived, economically-distinct, significant vars.
+# Removed: Maximum deductible amount (VIF 204), Tax shield (r=0.80 w/ TotFinExp),
+#          Alert Index (= Net income / TotFinExp, r=0.95), Current taxes (r=0.87 w/ OpInc),
+#          Operating cash flow (Wald p=0.55), Employees (redundant w/ Sales, r=0.52 -> replaced
+#          by productivity), Sales Revenue (redundant once productivity is in, Wald p=0.60).
+PRED_FEATS = ["Operating Income", "Net income", "Total financial expenses",
+              "Rev_per_Employee"]
 metrics["pred_feats_used"] = PRED_FEATS
 
 # ----------------------------------------------------------------------------
 # TASK B : CLASSIFICATION  (Logistic Regression via scipy.optimize)
 # ----------------------------------------------------------------------------
 y = df["Financial distress"].astype(int).values
-Xc = X[PRED_FEATS].copy()
+Xc = df[PRED_FEATS].copy()
+# log-transform monetary/ratio features for symmetry (Rev_per_Employee is a positive ratio)
+for c in PRED_FEATS:
+    Xc[c] = np.log1p(Xc[c].clip(lower=0))
 Xb = Xc.values.astype(float)
 Xb = (Xb - Xb.mean(0)) / (Xb.std(0) + 1e-9)  # standardize features
 Xb_aug = np.hstack([np.ones((len(Xb), 1)), Xb])
@@ -449,14 +454,16 @@ TRAIN = "train.csv"
 LOG_FEATS = ["Sales Revenue", "Employees", "Net income", "Operating Income",
              "Maximum deductible amount", "Total financial expenses", "Tax shield",
              "Operating cash flow", "Current taxes"]
-FEATS = ["Sales Revenue", "Employees", "Net income", "Operating Income",
-         "Total financial expenses"]  # 5 non-derived, significant predictors
+FEATS = ["Operating Income", "Net income", "Total financial expenses",
+         "Rev_per_Employee"]  # 4 non-derived, economically-distinct, significant predictors
 
 def prep(d):
     d = d.copy()
     d["Alert Index"] = pd.to_numeric(d["Alert Index"], errors="coerce").fillna(0.0)
+    d["Rev_per_Employee"] = d["Sales Revenue"] / d["Employees"].clip(lower=1)
     for c in LOG_FEATS:
         d[c] = np.log1p(d[c].clip(lower=0))
+    d["Rev_per_Employee"] = np.log1p(d["Rev_per_Employee"].clip(lower=0))
     return d[FEATS].values.astype(float)
 
 def weighted_logloss(w, X, y, sw):

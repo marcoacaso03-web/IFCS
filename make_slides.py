@@ -83,7 +83,7 @@ SLIDES.append({
         ("Rows.", "13,956 -> 13,871: removed 3 impossible (Sales<=0) + 85 incongruent outliers."),
         ("Contextual rule.", "Drop extreme only if its correlated vars are normal (erroneous); keep coherent extremes (real distress)."),
         ("Derived vars dropped.", "Max deductible, Tax shield, Alert Index (=NetInc/TotFinExp r=0.95), Current taxes (r=0.87 w/ OpInc)."),
-        ("Final model.", "5 significant non-derived vars: Sales, Employees, Net/Op income, TotFinExp (Wald all p<0.05; CV AUC 0.846)."),
+        ("Final model.", "4 significant non-derived vars: OpInc, NetInc, TotFinExp, Sales/Employee (productivity; Wald all p<0.001; CV AUC 0.853)."),
         ("Result.", "Cleaner model, same/higher AUC - removed vars were redundant noise."),
     ],
 })
@@ -124,7 +124,7 @@ SLIDES.append({
     "type": "content", "title": "Task B - Predicting Distress",
     "bullets": [
         ("Model.", "Logistic Regression (L2, class-weighted) - robust baseline for early warning."),
-        ("Features.", "5 significant non-derived vars (Wald all p<0.05); redundant derived vars dropped."),
+        ("Features.", "4 significant non-derived vars (Wald all p<0.001): OpInc, NetInc, TotFinExp, productivity."),
         ("Validation.", f"5-fold stratified CV, ROC-AUC = {cls.get('cv_roc_auc_mean',0):.3f} (+/- {cls.get('cv_roc_auc_std',0):.3f})."),
         ("Train AUC.", f"{cls.get('train_roc_auc',0):.3f}."),
         ("Deliverable.", "predictions.csv: Company ID + pred_class (TRUE/FALSE)."),

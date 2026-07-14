@@ -169,50 +169,43 @@
     "note": "Severe collinearity: 'Maximum deductible amount' (VIF~204) and 'Operating Income' (VIF~182) are near-perfectly collinear (r=0.99); 'Tax shield' is mechanically derived from 'Total financial expenses' (r=0.80). Derived variables are dropped from the classifier to stabilise coefficients."
   },
   "pred_feats_used": [
-    "Sales Revenue",
-    "Employees",
-    "Net income",
     "Operating Income",
-    "Total financial expenses"
+    "Net income",
+    "Total financial expenses",
+    "Rev_per_Employee"
   ],
   "classification": {
     "model": "Logistic Regression (L2, class-weighted)",
-    "cv_roc_auc_mean": 0.8525571640502541,
-    "cv_roc_auc_std": 0.01634304221822684,
-    "train_roc_auc": 0.8558203971103606
+    "cv_roc_auc_mean": 0.8531390336724971,
+    "cv_roc_auc_std": 0.016738620824346816,
+    "train_roc_auc": 0.8554316330006589
   },
   "feature_importance": {
-    "Operating Income": 0.7484771413766843,
-    "Net income": 0.4437163854082813,
-    "Total financial expenses": 0.308518068481811,
-    "Sales Revenue": 0.20160487014024908,
-    "Employees": 0.1296068191573716
+    "Operating Income": 0.7904193749769395,
+    "Net income": 0.44222795898278056,
+    "Total financial expenses": 0.34263860421403547,
+    "Rev_per_Employee": 0.2529002050599793
   },
   "wald": {
-    "Sales Revenue": {
-      "coef": -0.20160487036233884,
-      "z": -2.453546080143896,
-      "p_value": 0.014145541449174681
-    },
-    "Employees": {
-      "coef": 0.12960681936706406,
-      "z": 1.8617474408957067,
-      "p_value": 0.06263869811638179
+    "Operating Income": {
+      "coef": -0.7904193753685501,
+      "z": -7.584672949854793,
+      "p_value": 3.3306690738754696e-14
     },
     "Net income": {
-      "coef": -0.4437163856124224,
-      "z": -3.4233358834635226,
-      "p_value": 0.0006185759162153914
-    },
-    "Operating Income": {
-      "coef": -0.7484771417475148,
-      "z": -7.313305812082594,
-      "p_value": 2.6068036618198676e-13
+      "coef": -0.44222795918623686,
+      "z": -3.315167875749334,
+      "p_value": 0.0009158810377909443
     },
     "Total financial expenses": {
-      "coef": 0.30851806866848064,
-      "z": 4.192108961012377,
-      "p_value": 2.763731918964396e-05
+      "coef": 0.3426386044213498,
+      "z": 4.839079343666514,
+      "p_value": 1.3044196722766799e-06
+    },
+    "Rev_per_Employee": {
+      "coef": -0.25290020538014135,
+      "z": -3.6842573474900466,
+      "p_value": 0.00022937041334070152
     }
   },
   "demo_pred_pos_rate": 0.0,

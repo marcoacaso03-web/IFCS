@@ -35,26 +35,26 @@ Repo: `marcoacaso03-web/IFCS` · Dati: `train.csv` (13.956 SMEs, FY2023)
 
 **Variable selection — feature usate nel clustering vs classificazione.**
 - *Clustering (10 feat):* tutte le variabili finanziarie, incluse le derivate (K-Means non soffre di collinearità e servono per il profiling economico).
-- *Classificazione (5 feat, finali):* `Sales Revenue`, `Employees`, `Net income`, `Operating Income`, `Total financial expenses`.
+- *Classificazione (4 feat, finali):* `Operating Income`, `Net income`, `Total financial expenses`, `Sales Revenue per Employee` (Employees trasformata in produttività).
 
 **Come è stata fatta la selection (non solo collinearità, ma anche significatività):**
 1. **Multicollinearità (VIF):** rimosse `Maximum deductible amount` (VIF=204, derivata da Operating Income) e `Tax shield` (derivata da Total financial expenses, r=0,80).
 2. **Variabili composte/derivate identificate sui dati:** `Alert Index` risulta = `Net income / Total financial expenses` (r=0,953, indice di copertura del debito) → rimossa perché ricombinazione di due predittori già presenti.
 3. **Collinearità con il reddito:** `Current taxes` è proporzionale a `Operating Income` (r=0,87; rapporto mediano 0,27 ≈ aliquota effettiva IRES+IRAP) → rimossa per doppia conta.
 4. **Non-significatività (Wald):** `Operating cash flow` non significativa (p=0,55) una volta nel modello Op/Net income → rimossa.
-5. **Confronto AUC:** il set da 5 ha CV ROC-AUC = **0,846**, il più alto (l'8-feature era 0,844) → la rimozione delle variabili ridondanti non solo stabilizza i coefficienti ma migliora leggermente il potere predittivo.
+5. **Ridondanza dimensionale:** `Sales Revenue` e `Employees` misurano entrambi la dimensione (r=0,52). Anziché scartare `Employees`, è stata **trasformata in `Sales Revenue per Employee`** (produttività del lavoro, r=−0,22 con Employees → informazione ortogonale) che diventa altamente significativa (Wald p=2,3e-04); a quel punto `Sales Revenue` risulta ridondante (p=0,60) e viene rimossa.
+6. **Confronto AUC:** il set da 4 ha CV ROC-AUC = **0,853**, in linea (anzi lievemente superiore) con i set più ampi → la rimozione delle variabili ridondanti non ha costo predittivo.
 
-Le 5 variabili finali sono **tutte non-derivate e statisticamente significative** (Wald, modello class-weighted):
+Le 4 variabili finali sono **tutte non-derivate (nel set), economicamente distinte e statisticamente significative** (Wald, modello class-weighted):
 
-| Variabile | coef | z | p-value | sig |
-|---|---|---|---|---|
-| Operating Income | −0,748 | −7,31 | 2,6e-13 | `***` |
-| Net income | −0,444 | −3,42 | 6,2e-04 | `***` |
-| Total financial expenses | +0,309 | +4,19 | 2,8e-05 | `***` |
-| Sales Revenue | −0,202 | −2,45 | 1,4e-02 | `*` |
-| Employees | +0,130 | +1,86 | 6,3e-02 | (borderline) |
+| Variabile | ruolo economico | coef | z | p-value | sig |
+|---|---|---|---|---|---|
+| Operating Income | redditività operativa | −0,790 | −7,58 | 3,3e-14 | `***` |
+| Net income | utile netto | −0,442 | −3,32 | 9,2e-04 | `***` |
+| Total financial expenses | oneri / leva finanziaria | +0,343 | +4,84 | 1,3e-06 | `***` |
+| Sales Revenue per Employee | produttività del lavoro | −0,253 | −3,68 | 2,3e-04 | `***` |
 
-(I segni negativi sui conti indicano che maggiore redditività → minor distress; `Total financial expenses` positivo = maggior onere del debito → più distress. `Company ID`, `Province`, `sector` non entrano come predittori.)
+(I segni negativi sui conti indicano che maggiore redditività/produttività → minor distress; `Total financial expenses` positivo = maggior onere del debito → più distress. `Company ID`, `Province`, `sector` non entrano come predittori.)
 
 **Data cleaning — outlier contestuali.** Prima di modellare si rimuovono le righe errate, distinguendo gli outlier *coerenti* da quelli *incongruenti*:
 - **Sempre rimosse:** `Sales Revenue ≤ 0` (impossibile) → 3 righe.
