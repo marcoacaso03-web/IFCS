@@ -17,8 +17,8 @@ LOG_FEATS = ["Sales Revenue", "Employees", "Net income", "Operating Income",
              "Maximum deductible amount", "Total financial expenses", "Tax shield",
              "Operating cash flow", "Current taxes"]
 FEATS = ["Sales Revenue", "Employees", "Net income", "Operating Income",
-         "Maximum deductible amount", "Total financial expenses", "Tax shield",
-         "Operating cash flow", "Current taxes", "Alert Index"]
+         "Total financial expenses", "Operating cash flow", "Current taxes",
+         "Alert Index"]  # derived/redundant vars dropped for coefficient stability
 
 def prep(d):
     d = d.copy()

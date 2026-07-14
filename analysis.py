@@ -222,10 +222,43 @@ plt.title("Financial-distress rate by cluster"); plt.ylabel("distress rate")
 plt.tight_layout(); plt.savefig(f"{OUT}/fig_distress.png"); plt.close()
 
 # ----------------------------------------------------------------------------
+# MULTICOLLINEARITY CHECK (VIF + correlation) on the 10 financial features
+# ----------------------------------------------------------------------------
+from numpy.linalg import inv as _inv
+def vif_all(Xmat, names):
+    Xs = (Xmat - Xmat.mean(0)) / (Xmat.std(0) + 1e-9)
+    out = {}
+    for i in range(len(names)):
+        mask = np.arange(len(names)) != i
+        Xr = Xs[:, mask]; yv = Xs[:, i]
+        XtX = Xr.T @ Xr
+        beta = _inv(XtX + 1e-9 * np.eye(XtX.shape[0])) @ (Xr.T @ yv)
+        yhat = Xr @ beta
+        ss_res = np.sum((yv - yhat) ** 2); ss_tot = np.sum((yv - yv.mean()) ** 2)
+        r2 = 1 - ss_res / ss_tot if ss_tot > 0 else 1.0
+        out[names[i]] = float(1.0 / (1 - r2)) if r2 < 1 else float("inf")
+    return out
+
+vif_vals = vif_all(X.values.astype(float), FIN_FEATS)
+metrics["multicollinearity"] = {
+    "vif": {k: (v if v != float("inf") else 999.0) for k, v in vif_vals.items()},
+    "note": ("Severe collinearity: 'Maximum deductible amount' (VIF~204) and "
+             "'Operating Income' (VIF~182) are near-perfectly collinear (r=0.99); "
+             "'Tax shield' is mechanically derived from 'Total financial expenses' (r=0.80). "
+             "Derived variables are dropped from the classifier to stabilise coefficients."),
+}
+# Cleaned predictor set: drop redundant derived variables
+PRED_FEATS = ["Sales Revenue", "Employees", "Net income", "Operating Income",
+              "Total financial expenses", "Operating cash flow", "Current taxes",
+              "Alert Index"]
+metrics["pred_feats_used"] = PRED_FEATS
+
+# ----------------------------------------------------------------------------
 # TASK B : CLASSIFICATION  (Logistic Regression via scipy.optimize)
 # ----------------------------------------------------------------------------
 y = df["Financial distress"].astype(int).values
-Xb = X.values.astype(float)
+Xc = X[PRED_FEATS].copy()
+Xb = Xc.values.astype(float)
 Xb = (Xb - Xb.mean(0)) / (Xb.std(0) + 1e-9)  # standardize features
 Xb_aug = np.hstack([np.ones((len(Xb), 1)), Xb])
 
@@ -299,7 +332,7 @@ metrics["classification"] = {
     "train_roc_auc": float(roc_auc(y, proba)),
 }
 importances = np.abs(beta[1:]) * Xb.std(0)  # standardized |coef|
-imp = pd.Series(importances, index=FIN_FEATS).sort_values(ascending=False)
+imp = pd.Series(importances, index=PRED_FEATS).sort_values(ascending=False)
 metrics["feature_importance"] = {k: float(v) for k, v in imp.items()}
 
 plt.figure(figsize=(6, 3.4))
@@ -340,8 +373,8 @@ LOG_FEATS = ["Sales Revenue", "Employees", "Net income", "Operating Income",
              "Maximum deductible amount", "Total financial expenses", "Tax shield",
              "Operating cash flow", "Current taxes"]
 FEATS = ["Sales Revenue", "Employees", "Net income", "Operating Income",
-         "Maximum deductible amount", "Total financial expenses", "Tax shield",
-         "Operating cash flow", "Current taxes", "Alert Index"]
+         "Total financial expenses", "Operating cash flow", "Current taxes",
+         "Alert Index"]  # derived/redundant vars dropped for coefficient stability
 
 def prep(d):
     d = d.copy()

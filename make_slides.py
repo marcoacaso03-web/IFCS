@@ -112,6 +112,7 @@ SLIDES.append({
     "type": "content", "title": "Task B - Predicting Distress",
     "bullets": [
         ("Model.", "Logistic Regression (L2, class-weighted) - robust baseline for early warning."),
+        ("Cleaning.", "Dropped 2 collinear derived vars (VIF 182-204) so coefficients are stable."),
         ("Validation.", f"5-fold stratified CV, ROC-AUC = {cls.get('cv_roc_auc_mean',0):.3f} (+/- {cls.get('cv_roc_auc_std',0):.3f})."),
         ("Train AUC.", f"{cls.get('train_roc_auc',0):.3f}."),
         ("Deliverable.", "predictions.csv: Company ID + pred_class (TRUE/FALSE)."),

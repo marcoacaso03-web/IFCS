@@ -145,23 +145,46 @@
       "South": 176.0
     }
   },
+  "multicollinearity": {
+    "vif": {
+      "Sales Revenue": 2.280473297477478,
+      "Employees": 1.3830416085043387,
+      "Net income": 8.738907720210253,
+      "Operating Income": 181.97874970489147,
+      "Maximum deductible amount": 203.8295717244959,
+      "Total financial expenses": 8.040731595011536,
+      "Tax shield": 10.217999599156052,
+      "Operating cash flow": 4.598141606279607,
+      "Current taxes": 3.905896645455679,
+      "Alert Index": 1.0216371019231767
+    },
+    "note": "Severe collinearity: 'Maximum deductible amount' (VIF~204) and 'Operating Income' (VIF~182) are near-perfectly collinear (r=0.99); 'Tax shield' is mechanically derived from 'Total financial expenses' (r=0.80). Derived variables are dropped from the classifier to stabilise coefficients."
+  },
+  "pred_feats_used": [
+    "Sales Revenue",
+    "Employees",
+    "Net income",
+    "Operating Income",
+    "Total financial expenses",
+    "Operating cash flow",
+    "Current taxes",
+    "Alert Index"
+  ],
   "classification": {
     "model": "Logistic Regression (L2, class-weighted)",
-    "cv_roc_auc_mean": 0.851674758694384,
-    "cv_roc_auc_std": 0.007977620380935873,
-    "train_roc_auc": 0.8564508154357107
+    "cv_roc_auc_mean": 0.8519839571410859,
+    "cv_roc_auc_std": 0.007709269248304983,
+    "train_roc_auc": 0.8564143669096479
   },
   "feature_importance": {
-    "Operating Income": 0.4918905924949358,
-    "Net income": 0.3656589039689628,
-    "Total financial expenses": 0.33677249857323655,
-    "Maximum deductible amount": 0.29931911014115964,
-    "Sales Revenue": 0.2158912025396172,
-    "Employees": 0.1632532908118975,
-    "Operating cash flow": 0.1518889942008781,
-    "Current taxes": 0.14911336028699687,
-    "Tax shield": 0.13879901955034477,
-    "Alert Index": 0.047879058799071506
+    "Operating Income": 0.6588416608977661,
+    "Net income": 0.32573836074294266,
+    "Total financial expenses": 0.32187055946937804,
+    "Operating cash flow": 0.19040242749034067,
+    "Current taxes": 0.1508572666546066,
+    "Sales Revenue": 0.14868586277902476,
+    "Employees": 0.1338115155969802,
+    "Alert Index": 0.04619823127365512
   },
   "demo_pred_pos_rate": 0.0,
   "demo_accuracy": 0.8921610776726856

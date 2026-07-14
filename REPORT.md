@@ -16,6 +16,23 @@ Repo: `marcoacaso03-web/IFCS` · Dati: `train.csv` (13.956 SMEs, FY2023)
 
 **Trasformazione.** Le variabili monetarie/contabili sono fortemente asimmetriche (sales fino a ~50 M k€, molte imprese piccole). Applico `log1p` alle 9 variabili pesate e **standardizzo** (media 0, dev.std 1) prima di clustering e classificazione, così poche grandi imprese non dominano le distanze euclidean e i coefficienti logistici sono confrontabili.
 
+**Multicollinearità (prima della modellazione).** La matrice contabile contiene variabili fortemente correlate. Il **VIF** rivela collinearità severa:
+
+| Variabile | VIF |
+|---|---|
+| Maximum deductible amount | **203,8** |
+| Operating Income | **182,0** |
+| Tax shield | 10,2 |
+| Net income | 8,7 |
+| Total financial expenses | 8,0 |
+| Sales Revenue | 2,3 |
+| Operating cash flow | 4,6 |
+| Current taxes | 3,9 |
+| Employees | 1,4 |
+| Alert Index | 1,0 |
+
+`Maximum deductible amount` e `Operating Income` hanno correlazione 0,99 (quasi collinearità perfetta); `Tax shield` è meccanicamente derivato da `Total financial expenses` (r = 0,80). Con VIF > 100 i coefficienti logistici diventano instabili e le "importanze" non sono interpretabili singolarmente. **Decisione:** per la classificazione si **rimuovono le variabili derivate/ridondanti** (`Maximum deductible amount`, `Tax shield`), mantenendo l'8-set pulito. Il clustering le trattiene (K-Means è robusto alla collinearità e le variabili restano informative per il profiling).
+
 ---
 
 ## 2. Task A — Clustering (profilazione non supervisionata)
@@ -53,7 +70,7 @@ La silhouette è massima a **k = 2** (i dati sono un continuum), ma per uno scav
 
 ## 3. Task B — Classificazione (previsione del distress)
 
-**Modello.** Regressione Logistica (L2, *class-weighted* per gestire lo sbilanciro 1:8) — baseline robusta ed economicamente interpretabile per l'early-warning.
+**Modello.** Regressione Logistica (L2, *class-weighted* per gestire lo sbilanciro 1:8) — baseline robusta ed economicamente interpretabile per l'early-warning. Addestrata sull'**8-set pulito** (senza le variabili derivate/collineari) così i coefficienti sono stabili e le importanze interpretabili.
 
 **Validazione.** 5-fold stratified CV (ROC-AUC):
 
@@ -63,11 +80,13 @@ La silhouette è massima a **k = 2** (i dati sono un continuum), ma per uno scav
 | CV ROC-AUC (std) | 0,008 |
 | Train ROC-AUC | 0,856 |
 
-**Driver principali** (|coefficiente| standardizzato):
-1. `Operating Income` (0,49) — redditività operativa è il segnale dominante;
-2. `Net income` (0,37);
-3. `Total financial expenses` (0,34) — onere del debito;
-4. `Maximum deductible amount` (0,30).
+*Nota:* lo stesso AUC (0,852) si otteneva anche con le 10 variabili — le due rimosse erano quindi puramente ridondanti, e ora i coefficienti non sono più distorti dalla collinearità.
+
+**Driver principali** (|coefficiente| standardizzato, set pulito):
+1. `Operating Income` (0,66) — redditività operativa è il segnale dominante;
+2. `Net income` (0,33);
+3. `Total financial expenses` (0,32) — onere del debito;
+4. `Operating cash flow` (0,19).
 
 Il modello cattura quindi il distress guardando a redditività operativa, utili e peso degli oneri finanziari — coerente con l'interpretazione dei cluster (il cluster 4 ha proprio questi indicatori negativi).
 
