@@ -33,6 +33,17 @@ Repo: `marcoacaso03-web/IFCS` · Dati: `train.csv` (13.956 SMEs, FY2023)
 
 `Maximum deductible amount` e `Operating Income` hanno correlazione 0,99 (quasi collinearità perfetta); `Tax shield` è meccanicamente derivato da `Total financial expenses` (r = 0,80). Con VIF > 100 i coefficienti logistici diventano instabili e le "importanze" non sono interpretabili singolarmente. **Decisione:** per la classificazione si **rimuovono le variabili derivate/ridondanti** (`Maximum deductible amount`, `Tax shield`), mantenendo l'8-set pulito. Il clustering le trattiene (K-Means è robusto alla collinearità e le variabili restano informative per il profiling).
 
+**Variable selection — feature usate nel clustering vs classificazione.**
+- *Clustering (10 feat):* tutte le variabili finanziarie, incluse le derivate (K-Means non soffre di collinearità e servono per il profiling economico).
+- *Classificazione (8 feat, pulite):* `Sales Revenue`, `Employees`, `Net income`, `Operating Income`, `Total financial expenses`, `Operating cash flow`, `Current taxes`, `Alert Index`. Le due variabili derivate/collineari sono escluse per stabilità dei coefficienti; `Company ID`, `Province`, `sector` non entrano come predittori.
+
+**Data cleaning — outlier contestuali.** Prima di modellare si rimuovono le righe errate, distinguendo gli outlier *coerenti* da quelli *incongruenti*:
+- **Sempre rimosse:** `Sales Revenue ≤ 0` (impossibile) → 3 righe.
+- **Outlier incongruente (rimosso):** una riga con ≥1 variabile oltre il fence **3×IQR calcolato sui dati log1p** (asimmetria corretta) **E tutte le variabili correlate dentro il proprio fence** → il valore estremo è ingiustificato dal resto del profilo (errore di rilevazione). → 85 righe.
+- **Outlier coerente (mantenuto):** se l'estremo è accompagnato da movimenti congruenti sulle variabili correlate (es. `Net income` molto negativo insieme a `Operating Income` e `Operating cash flow` negativi) la riga è un'impresa realmente in difficoltà ed è **tenuta** (rilevante per il Task B).
+
+Risultato: **13.956 → 13.871 righe** (85 rimosse, 0,6 %). Il distress rate resta 10,8 % e l'AUC di classificazione non cambia (0,852), a conferma che le righe rimosse erano rumore e non segnale.
+
 ---
 
 ## 2. Task A — Clustering (profilazione non supervisionata)

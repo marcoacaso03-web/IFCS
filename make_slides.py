@@ -76,6 +76,18 @@ SLIDES.append({
     ],
 })
 
+# Slide 3b - cleaning & selection
+SLIDES.append({
+    "type": "content", "title": "Cleaning & Feature Selection",
+    "bullets": [
+        ("Rows.", "13,956 -> 13,871: removed 3 impossible (Sales<=0) + 85 incongruent outliers."),
+        ("Contextual rule.", "Drop extreme only if its correlated vars are normal (erroneous); keep coherent extremes (real distress)."),
+        ("Multicollinearity.", "VIF up to 204 (Max deductible ~ Operating Income); dropped 2 derived vars from the model."),
+        ("Classifier features.", "8 cleaned vars (Sales, Employees, Net/Op income, FinExp, OpCF, Taxes, Alert)."),
+        ("Result.", "Same CV AUC (0.852) - removed rows were noise, not signal."),
+    ],
+})
+
 # Slide 4
 SLIDES.append({
     "type": "content", "title": "Task A - Clustering Method",

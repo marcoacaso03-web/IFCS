@@ -1,7 +1,7 @@
 {
-  "n_firms": 13956,
-  "n_distress": 1505,
-  "distress_rate": 0.10783892232731442,
+  "n_firms": 13871,
+  "n_distress": 1504,
+  "distress_rate": 0.1084276548194074,
   "unmapped_provinces": 0,
   "region_counts": {
     "Lombardia": 3641,
@@ -25,138 +25,146 @@
     "Molise": 35,
     "Valle d'Aosta": 21
   },
+  "cleaning": {
+    "rows_in": 13956,
+    "removed_impossible_sales_le0": 3,
+    "removed_incongruent_outlier": 85,
+    "rows_out": 13871,
+    "removed_total": 85,
+    "rule": "remove if any feature beyond 3*IQR on log1p AND all correlated features inside fence (incongruent); plus Sales<=0"
+  },
   "silhouette_by_k": {
-    "2": 0.3080428195980134,
-    "3": 0.28116405793345867,
-    "4": 0.26487644291444884,
-    "5": 0.22769868416818112,
-    "6": 0.21670104936429543,
-    "7": 0.21300887817940312,
-    "8": 0.20227123861607446
+    "2": 0.2954747979374491,
+    "3": 0.2785856087270997,
+    "4": 0.2637493880739209,
+    "5": 0.21113085045385246,
+    "6": 0.19649080772382085,
+    "7": 0.18062190753958005,
+    "8": 0.1895012061808863
   },
   "best_k_silhouette": 5,
-  "silhouette_at_best": 0.22769868416818112,
+  "silhouette_at_best": 0.21113085045385246,
   "k_choice_rationale": "silhouette max at k=2; k=5 chosen for profiling granularity (separable micro/small/mid/large + risk signatures)",
   "cluster_sizes": {
-    "0": 3811,
-    "1": 3360,
-    "2": 2810,
-    "3": 2547,
-    "4": 1428
+    "0": 3828,
+    "1": 3328,
+    "2": 2849,
+    "3": 2449,
+    "4": 1417
   },
   "cluster_distress_rate": {
-    "0": 0.07006035161374967,
-    "1": 0.12529761904761905,
-    "2": 0.030249110320284697,
-    "3": 0.006281900274833137,
-    "4": 0.5014005602240896
+    "0": 0.07001044932079414,
+    "1": 0.12590144230769232,
+    "2": 0.029835029835029836,
+    "3": 0.006533278889342589,
+    "4": 0.5052928722653494
   },
   "cluster_means": {
     "0": {
-      "Sales Revenue": 4313.807376016794,
-      "Employees": 21.51613749672002,
-      "Net income": 122.24833849383364,
-      "Operating Income": 229.5257609551299,
-      "Maximum deductible amount": 68.85772828653896,
-      "Total financial expenses": 67.0686557334033,
-      "Tax shield": 41.6557474678562,
-      "Operating cash flow": 265.70197664654944,
-      "Current taxes": 50.030293361322485,
-      "Alert Index": 8.275366317095246
+      "Sales Revenue": 4300.61896368861,
+      "Employees": 21.291274817136888,
+      "Net income": 123.78702507836991,
+      "Operating Income": 231.06396238244514,
+      "Maximum deductible amount": 69.31918871473354,
+      "Total financial expenses": 66.58806478578892,
+      "Tax shield": 41.394149346917445,
+      "Operating cash flow": 266.85380564263323,
+      "Current taxes": 50.56487722048067,
+      "Alert Index": 8.484894106397997
     },
     "1": {
-      "Sales Revenue": 2059.522598809524,
-      "Employees": 17.764285714285716,
-      "Net income": 42.89155565476191,
-      "Operating Income": 63.395036607142856,
-      "Maximum deductible amount": 19.018510982142857,
-      "Total financial expenses": 12.61452738095238,
-      "Tax shield": 7.579490386904762,
-      "Operating cash flow": 95.43990773809524,
-      "Current taxes": 19.57301101190476,
-      "Alert Index": 383.30302814428023
+      "Sales Revenue": 2046.8627686298075,
+      "Employees": 17.771634615384617,
+      "Net income": 40.44860637019231,
+      "Operating Income": 62.0251592548077,
+      "Maximum deductible amount": 18.60754777644231,
+      "Total financial expenses": 12.757914663461538,
+      "Tax shield": 7.647702043269231,
+      "Operating cash flow": 92.84229206730768,
+      "Current taxes": 19.283466646634615,
+      "Alert Index": 228.90649295846015
     },
     "2": {
-      "Sales Revenue": 13577.749397864769,
-      "Employees": 48.92740213523132,
-      "Net income": 814.5573555160144,
-      "Operating Income": 1232.3903092526689,
-      "Maximum deductible amount": 369.7170927758007,
-      "Total financial expenses": 164.79785800711744,
-      "Tax shield": 115.20186733096085,
-      "Operating cash flow": 1201.6355455516014,
-      "Current taxes": 312.0059042704626,
-      "Alert Index": 32.718460414658416
+      "Sales Revenue": 13542.851126009127,
+      "Employees": 48.991926991926995,
+      "Net income": 813.3633534573535,
+      "Operating Income": 1229.8429505089505,
+      "Maximum deductible amount": 368.9528851526851,
+      "Total financial expenses": 162.99401193401192,
+      "Tax shield": 113.9465518076518,
+      "Operating cash flow": 1198.2523453843453,
+      "Current taxes": 311.8280379080379,
+      "Alert Index": 34.518349953569285
     },
     "3": {
-      "Sales Revenue": 5837.067965449549,
-      "Employees": 23.477424420887317,
-      "Net income": 546.9859120533962,
-      "Operating Income": 739.5952677659992,
-      "Maximum deductible amount": 221.87858032979977,
-      "Total financial expenses": 3.544802905378877,
-      "Tax shield": 3.544802905378877,
-      "Operating cash flow": 673.4474416961131,
-      "Current taxes": 209.9135563407931,
-      "Alert Index": 15021.138697105986
+      "Sales Revenue": 5661.685113107391,
+      "Employees": 23.06247447937934,
+      "Net income": 527.3693340138832,
+      "Operating Income": 709.9105806451613,
+      "Maximum deductible amount": 212.97317419354837,
+      "Total financial expenses": 3.4362168231931403,
+      "Tax shield": 3.4361870151082075,
+      "Operating cash flow": 650.4526729277255,
+      "Current taxes": 201.4695500204165,
+      "Alert Index": 2198.025157636048
     },
     "4": {
-      "Sales Revenue": 4556.802157563025,
-      "Employees": 32.60644257703081,
-      "Net income": -488.00042717086836,
-      "Operating Income": -474.5958158263305,
-      "Maximum deductible amount": -142.37874474789916,
-      "Total financial expenses": 60.55352731092437,
-      "Tax shield": 0.269530462184874,
-      "Operating cash flow": -263.2780105042017,
-      "Current taxes": 6.0239544817927175,
-      "Alert Index": -810.1769415877208
+      "Sales Revenue": 4573.897936485533,
+      "Employees": 32.61467889908257,
+      "Net income": -491.3763436838391,
+      "Operating Income": -477.8612893436839,
+      "Maximum deductible amount": -143.35838680310516,
+      "Total financial expenses": 60.96914678899083,
+      "Tax shield": 0.2555150317572336,
+      "Operating cash flow": -265.57160621030346,
+      "Current taxes": 5.91514467184192,
+      "Alert Index": -861.4796447960318
     }
   },
   "cluster_macro_share": {
     "0": {
-      "Centre": 780.0,
+      "Centre": 779.0,
       "Islands": 219.0,
-      "North": 2231.0,
-      "South": 581.0
+      "North": 2245.0,
+      "South": 585.0
     },
     "1": {
-      "Centre": 741.0,
-      "Islands": 230.0,
-      "North": 1863.0,
-      "South": 526.0
+      "Centre": 735.0,
+      "Islands": 232.0,
+      "North": 1845.0,
+      "South": 516.0
     },
     "2": {
-      "Centre": 499.0,
-      "Islands": 92.0,
-      "North": 1843.0,
-      "South": 376.0
+      "Centre": 505.0,
+      "Islands": 93.0,
+      "North": 1871.0,
+      "South": 380.0
     },
     "3": {
-      "Centre": 444.0,
-      "Islands": 89.0,
-      "North": 1730.0,
-      "South": 284.0
+      "Centre": 431.0,
+      "Islands": 88.0,
+      "North": 1645.0,
+      "South": 285.0
     },
     "4": {
-      "Centre": 315.0,
-      "Islands": 68.0,
-      "North": 869.0,
-      "South": 176.0
+      "Centre": 312.0,
+      "Islands": 66.0,
+      "North": 865.0,
+      "South": 174.0
     }
   },
   "multicollinearity": {
     "vif": {
-      "Sales Revenue": 2.280473297477478,
-      "Employees": 1.3830416085043387,
-      "Net income": 8.738907720210253,
-      "Operating Income": 181.97874970489147,
-      "Maximum deductible amount": 203.8295717244959,
-      "Total financial expenses": 8.040731595011536,
-      "Tax shield": 10.217999599156052,
-      "Operating cash flow": 4.598141606279607,
-      "Current taxes": 3.905896645455679,
-      "Alert Index": 1.0216371019231767
+      "Sales Revenue": 2.349044371088005,
+      "Employees": 1.3983132242596832,
+      "Net income": 8.690666826173343,
+      "Operating Income": 183.2168582539619,
+      "Maximum deductible amount": 204.56671148107958,
+      "Total financial expenses": 7.974928376300712,
+      "Tax shield": 10.401993532219235,
+      "Operating cash flow": 4.592985265301238,
+      "Current taxes": 3.8911462855697656,
+      "Alert Index": 1.059676539807024
     },
     "note": "Severe collinearity: 'Maximum deductible amount' (VIF~204) and 'Operating Income' (VIF~182) are near-perfectly collinear (r=0.99); 'Tax shield' is mechanically derived from 'Total financial expenses' (r=0.80). Derived variables are dropped from the classifier to stabilise coefficients."
   },
@@ -172,20 +180,20 @@
   ],
   "classification": {
     "model": "Logistic Regression (L2, class-weighted)",
-    "cv_roc_auc_mean": 0.8519839571410859,
-    "cv_roc_auc_std": 0.007709269248304983,
-    "train_roc_auc": 0.8564143669096479
+    "cv_roc_auc_mean": 0.8524805044603967,
+    "cv_roc_auc_std": 0.016013572587191202,
+    "train_roc_auc": 0.8557131388613142
   },
   "feature_importance": {
-    "Operating Income": 0.6588416608977661,
-    "Net income": 0.32573836074294266,
-    "Total financial expenses": 0.32187055946937804,
-    "Operating cash flow": 0.19040242749034067,
-    "Current taxes": 0.1508572666546066,
-    "Sales Revenue": 0.14868586277902476,
-    "Employees": 0.1338115155969802,
-    "Alert Index": 0.04619823127365512
+    "Operating Income": 0.6619449504769045,
+    "Net income": 0.3283909528429348,
+    "Total financial expenses": 0.3179727969446331,
+    "Operating cash flow": 0.19425306156560757,
+    "Sales Revenue": 0.16726907585768538,
+    "Current taxes": 0.15126419013132042,
+    "Employees": 0.14242282071021975,
+    "Alert Index": 0.05102783669666573
   },
   "demo_pred_pos_rate": 0.0,
-  "demo_accuracy": 0.8921610776726856
+  "demo_accuracy": 0.8915723451805926
 }

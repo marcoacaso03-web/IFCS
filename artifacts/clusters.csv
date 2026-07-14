@@ -19,7 +19,6 @@ Company ID,cluster,region,macro
 31,0,Molise,South
 32,1,Veneto,North
 33,0,Veneto,North
-34,3,Lombardia,North
 35,2,Lombardia,North
 37,2,Veneto,North
 39,3,Veneto,North
@@ -85,7 +84,6 @@ Company ID,cluster,region,macro
 146,2,Lazio,Centre
 147,4,Lombardia,North
 149,3,Toscana,Centre
-151,3,Lombardia,North
 152,2,Liguria,North
 155,1,Emilia-Romagna,North
 156,0,Friuli-Venezia Giulia,North
@@ -100,7 +98,7 @@ Company ID,cluster,region,macro
 172,1,Piemonte,North
 175,1,Lombardia,North
 176,1,Abruzzo,South
-179,3,Veneto,North
+179,2,Veneto,North
 180,0,Abruzzo,South
 182,1,Campania,South
 183,0,Piemonte,North
@@ -262,8 +260,7 @@ Company ID,cluster,region,macro
 445,0,Emilia-Romagna,North
 446,0,Campania,South
 447,1,Emilia-Romagna,North
-448,0,Lombardia,North
-449,1,Lombardia,North
+448,2,Lombardia,North
 450,2,Veneto,North
 452,1,Lombardia,North
 453,1,Lombardia,North
@@ -327,10 +324,9 @@ Company ID,cluster,region,macro
 550,3,Veneto,North
 551,1,Lazio,Centre
 552,0,Lazio,Centre
-553,3,Lazio,Centre
 554,0,Emilia-Romagna,North
 555,3,Lombardia,North
-556,4,Lombardia,North
+556,1,Lombardia,North
 558,3,Campania,South
 561,1,Friuli-Venezia Giulia,North
 562,3,Piemonte,North
@@ -410,10 +406,9 @@ Company ID,cluster,region,macro
 678,1,Lombardia,North
 679,2,Lombardia,North
 680,4,Piemonte,North
-681,1,Abruzzo,South
+681,3,Abruzzo,South
 682,2,Piemonte,North
 683,2,Lombardia,North
-685,3,Emilia-Romagna,North
 686,3,Veneto,North
 687,0,Piemonte,North
 689,4,Emilia-Romagna,North
@@ -522,10 +517,9 @@ Company ID,cluster,region,macro
 843,1,Sardegna,Islands
 844,1,Sardegna,Islands
 847,0,Umbria,Centre
-849,3,Lombardia,North
+849,0,Lombardia,North
 851,2,Lazio,Centre
 852,0,Puglia,South
-854,3,Toscana,Centre
 855,2,Lombardia,North
 856,0,Trentino-Alto Adige,North
 857,3,Campania,South
@@ -697,7 +691,6 @@ Company ID,cluster,region,macro
 1109,3,Piemonte,North
 1110,1,Lombardia,North
 1112,1,Lombardia,North
-1115,3,Lombardia,North
 1116,0,Emilia-Romagna,North
 1117,2,Veneto,North
 1118,3,Trentino-Alto Adige,North
@@ -745,7 +738,6 @@ Company ID,cluster,region,macro
 1179,2,Emilia-Romagna,North
 1180,0,Puglia,South
 1182,1,Friuli-Venezia Giulia,North
-1183,3,Lombardia,North
 1185,0,Abruzzo,South
 1187,0,Toscana,Centre
 1190,1,Lombardia,North
@@ -758,14 +750,14 @@ Company ID,cluster,region,macro
 1200,2,Lombardia,North
 1202,1,Sicilia,Islands
 1203,1,Lombardia,North
-1206,1,Campania,South
+1206,0,Campania,South
 1207,2,Friuli-Venezia Giulia,North
 1209,3,Sardegna,Islands
 1210,0,Puglia,South
 1213,3,Emilia-Romagna,North
 1214,0,Lombardia,North
 1216,1,Campania,South
-1218,1,Veneto,North
+1218,3,Veneto,North
 1221,0,Piemonte,North
 1222,1,Lazio,Centre
 1223,0,Veneto,North
@@ -813,7 +805,6 @@ Company ID,cluster,region,macro
 1298,0,Emilia-Romagna,North
 1299,1,Veneto,North
 1300,0,Veneto,North
-1301,1,Veneto,North
 1304,0,Veneto,North
 1305,3,Toscana,Centre
 1309,2,Emilia-Romagna,North
@@ -948,7 +939,7 @@ Company ID,cluster,region,macro
 1518,0,Friuli-Venezia Giulia,North
 1520,1,Lombardia,North
 1521,3,Lombardia,North
-1523,1,Abruzzo,South
+1523,3,Abruzzo,South
 1526,0,Lazio,Centre
 1527,3,Lazio,Centre
 1528,2,Basilicata,South
@@ -1037,7 +1028,6 @@ Company ID,cluster,region,macro
 1666,2,Veneto,North
 1668,3,Abruzzo,South
 1669,1,Veneto,North
-1671,3,Veneto,North
 1672,2,Campania,South
 1673,0,Emilia-Romagna,North
 1674,2,Toscana,Centre
@@ -1058,7 +1048,6 @@ Company ID,cluster,region,macro
 1696,0,Sicilia,Islands
 1697,0,Lombardia,North
 1699,0,Piemonte,North
-1700,3,Emilia-Romagna,North
 1701,3,Lombardia,North
 1704,3,Campania,South
 1705,3,Lazio,Centre
@@ -1097,7 +1086,6 @@ Company ID,cluster,region,macro
 1753,1,Veneto,North
 1755,1,Veneto,North
 1756,2,Campania,South
-1757,3,Emilia-Romagna,North
 1758,0,Lombardia,North
 1759,0,Sicilia,Islands
 1760,3,Friuli-Venezia Giulia,North
@@ -1204,7 +1192,7 @@ Company ID,cluster,region,macro
 1921,2,Toscana,Centre
 1923,1,Lazio,Centre
 1925,0,Lombardia,North
-1926,1,Lazio,Centre
+1926,3,Lazio,Centre
 1927,1,Friuli-Venezia Giulia,North
 1929,0,Marche,Centre
 1933,2,Friuli-Venezia Giulia,North
@@ -1227,7 +1215,7 @@ Company ID,cluster,region,macro
 1955,1,Piemonte,North
 1957,0,Piemonte,North
 1958,2,Abruzzo,South
-1959,1,Trentino-Alto Adige,North
+1959,3,Trentino-Alto Adige,North
 1961,0,Umbria,Centre
 1962,2,Trentino-Alto Adige,North
 1963,0,Veneto,North
@@ -1293,7 +1281,6 @@ Company ID,cluster,region,macro
 2063,0,Lombardia,North
 2066,2,Lombardia,North
 2071,0,Veneto,North
-2072,3,Veneto,North
 2073,1,Sardegna,Islands
 2074,1,Toscana,Centre
 2076,2,Lombardia,North
@@ -1327,12 +1314,11 @@ Company ID,cluster,region,macro
 2118,2,Lombardia,North
 2119,0,Lazio,Centre
 2120,2,Piemonte,North
-2123,3,Lombardia,North
+2123,0,Lombardia,North
 2124,2,Emilia-Romagna,North
 2125,3,Emilia-Romagna,North
 2126,1,Lombardia,North
 2127,4,Piemonte,North
-2130,3,Lombardia,North
 2131,3,Lombardia,North
 2132,3,Campania,South
 2133,1,Puglia,South
@@ -1373,7 +1359,7 @@ Company ID,cluster,region,macro
 2205,2,Lombardia,North
 2207,4,Lazio,Centre
 2208,1,Emilia-Romagna,North
-2209,4,Lazio,Centre
+2209,1,Lazio,Centre
 2212,2,Toscana,Centre
 2215,1,Sicilia,Islands
 2220,0,Veneto,North
@@ -1578,7 +1564,6 @@ Company ID,cluster,region,macro
 2521,2,Veneto,North
 2522,2,Lombardia,North
 2523,0,Lombardia,North
-2524,3,Veneto,North
 2525,3,Marche,Centre
 2526,1,Lombardia,North
 2527,0,Piemonte,North
@@ -1589,7 +1574,7 @@ Company ID,cluster,region,macro
 2534,2,Emilia-Romagna,North
 2535,1,Lombardia,North
 2537,0,Umbria,Centre
-2538,3,Lombardia,North
+2538,0,Lombardia,North
 2539,3,Lombardia,North
 2543,2,Trentino-Alto Adige,North
 2544,1,Toscana,Centre
@@ -1930,7 +1915,6 @@ Company ID,cluster,region,macro
 3087,0,Piemonte,North
 3090,1,Sicilia,Islands
 3091,3,Lombardia,North
-3092,3,Trentino-Alto Adige,North
 3093,0,Abruzzo,South
 3094,2,Marche,Centre
 3095,3,Lombardia,North
@@ -1942,7 +1926,7 @@ Company ID,cluster,region,macro
 3106,0,Piemonte,North
 3107,1,Toscana,Centre
 3109,3,Lombardia,North
-3113,3,Veneto,North
+3113,0,Veneto,North
 3114,4,Veneto,North
 3117,1,Toscana,Centre
 3119,3,Lombardia,North
@@ -1953,7 +1937,6 @@ Company ID,cluster,region,macro
 3126,3,Toscana,Centre
 3127,0,Campania,South
 3129,1,Veneto,North
-3132,1,Emilia-Romagna,North
 3134,3,Lombardia,North
 3135,1,Lombardia,North
 3136,1,Campania,South
@@ -1975,7 +1958,7 @@ Company ID,cluster,region,macro
 3165,0,Toscana,Centre
 3166,2,Emilia-Romagna,North
 3167,0,Lombardia,North
-3168,0,Lombardia,North
+3168,2,Lombardia,North
 3169,4,Umbria,Centre
 3170,1,Lombardia,North
 3173,3,Lombardia,North
@@ -2019,7 +2002,7 @@ Company ID,cluster,region,macro
 3241,0,Lazio,Centre
 3242,1,Sardegna,Islands
 3245,2,Campania,South
-3247,1,Lazio,Centre
+3247,3,Lazio,Centre
 3248,0,Veneto,North
 3249,0,Sicilia,Islands
 3250,2,Lombardia,North
@@ -2064,19 +2047,18 @@ Company ID,cluster,region,macro
 3310,1,Veneto,North
 3311,3,Lombardia,North
 3312,1,Lombardia,North
-3314,3,Lombardia,North
 3315,3,Veneto,North
 3317,2,Friuli-Venezia Giulia,North
 3318,3,Emilia-Romagna,North
 3323,3,Lazio,Centre
-3324,3,Lombardia,North
+3324,0,Lombardia,North
 3325,1,Campania,South
 3326,2,Lombardia,North
 3327,0,Liguria,North
 3334,1,Veneto,North
 3335,1,Lombardia,North
 3337,0,Lombardia,North
-3340,3,Veneto,North
+3340,2,Veneto,North
 3342,2,Trentino-Alto Adige,North
 3343,0,Emilia-Romagna,North
 3344,0,Abruzzo,South
@@ -2260,7 +2242,6 @@ Company ID,cluster,region,macro
 3626,2,Emilia-Romagna,North
 3628,1,Lombardia,North
 3629,0,Lombardia,North
-3631,3,Lombardia,North
 3632,4,Sicilia,Islands
 3634,2,Sardegna,Islands
 3635,1,Veneto,North
@@ -2340,7 +2321,7 @@ Company ID,cluster,region,macro
 3745,1,Veneto,North
 3746,4,Emilia-Romagna,North
 3747,1,Piemonte,North
-3748,4,Campania,South
+3748,1,Campania,South
 3749,1,Puglia,South
 3750,1,Abruzzo,South
 3752,1,Friuli-Venezia Giulia,North
@@ -2389,7 +2370,7 @@ Company ID,cluster,region,macro
 3814,0,Lombardia,North
 3816,0,Lazio,Centre
 3818,2,Toscana,Centre
-3820,3,Sicilia,Islands
+3820,2,Sicilia,Islands
 3821,3,Veneto,North
 3824,1,Umbria,Centre
 3826,1,Veneto,North
@@ -2421,7 +2402,6 @@ Company ID,cluster,region,macro
 3864,0,Toscana,Centre
 3865,1,Emilia-Romagna,North
 3868,2,Veneto,North
-3871,3,Emilia-Romagna,North
 3872,0,Toscana,Centre
 3874,2,Veneto,North
 3880,1,Piemonte,North
@@ -2485,7 +2465,7 @@ Company ID,cluster,region,macro
 3979,2,Lombardia,North
 3980,1,Campania,South
 3982,2,Lombardia,North
-3986,1,Lombardia,North
+3986,3,Lombardia,North
 3987,0,Abruzzo,South
 3990,0,Campania,South
 3991,3,Molise,South
@@ -2754,7 +2734,7 @@ Company ID,cluster,region,macro
 4409,3,Lazio,Centre
 4410,2,Veneto,North
 4411,3,Lombardia,North
-4412,1,Veneto,North
+4412,3,Veneto,North
 4414,2,Calabria,South
 4416,3,Campania,South
 4417,0,Emilia-Romagna,North
@@ -2820,7 +2800,7 @@ Company ID,cluster,region,macro
 4514,1,Lombardia,North
 4516,1,Campania,South
 4517,2,Toscana,Centre
-4520,3,Marche,Centre
+4520,2,Marche,Centre
 4521,0,Toscana,Centre
 4522,2,Piemonte,North
 4523,0,Lombardia,North
@@ -2964,11 +2944,9 @@ Company ID,cluster,region,macro
 4743,2,Piemonte,North
 4745,3,Lombardia,North
 4746,2,Emilia-Romagna,North
-4747,3,Marche,Centre
 4748,3,Lombardia,North
 4749,1,Veneto,North
 4750,2,Sicilia,Islands
-4751,3,Lombardia,North
 4754,3,Lombardia,North
 4756,0,Lombardia,North
 4757,0,Veneto,North
@@ -3228,7 +3206,6 @@ Company ID,cluster,region,macro
 5186,0,Sardegna,Islands
 5189,2,Lombardia,North
 5190,0,Lombardia,North
-5191,3,Lombardia,North
 5195,3,Emilia-Romagna,North
 5196,3,Lombardia,North
 5197,0,Trentino-Alto Adige,North
@@ -3304,7 +3281,6 @@ Company ID,cluster,region,macro
 5295,0,Lazio,Centre
 5297,3,Lombardia,North
 5298,2,Lombardia,North
-5301,3,Lazio,Centre
 5302,4,Abruzzo,South
 5304,3,Marche,Centre
 5305,2,Piemonte,North
@@ -3434,21 +3410,19 @@ Company ID,cluster,region,macro
 5508,0,Lombardia,North
 5510,4,Lombardia,North
 5511,1,Lombardia,North
-5512,1,Liguria,North
 5513,1,Piemonte,North
 5514,0,Emilia-Romagna,North
 5520,3,Veneto,North
 5522,0,Toscana,Centre
 5523,3,Emilia-Romagna,North
 5524,0,Lombardia,North
-5525,3,Emilia-Romagna,North
 5526,1,Emilia-Romagna,North
 5530,3,Campania,South
 5531,3,Toscana,Centre
 5532,2,Lazio,Centre
 5534,2,Lazio,Centre
 5536,2,Toscana,Centre
-5538,1,Campania,South
+5538,3,Campania,South
 5542,1,Toscana,Centre
 5543,1,Veneto,North
 5544,4,Sicilia,Islands
@@ -3456,7 +3430,6 @@ Company ID,cluster,region,macro
 5547,1,Lazio,Centre
 5548,2,Molise,South
 5550,2,Lombardia,North
-5551,3,Campania,South
 5555,1,Piemonte,North
 5557,2,Marche,Centre
 5558,3,Puglia,South
@@ -3513,7 +3486,7 @@ Company ID,cluster,region,macro
 5640,1,Sicilia,Islands
 5641,2,Basilicata,South
 5644,2,Veneto,North
-5647,3,Puglia,South
+5647,0,Puglia,South
 5648,2,Sicilia,Islands
 5649,0,Toscana,Centre
 5650,2,Lazio,Centre
@@ -3673,7 +3646,6 @@ Company ID,cluster,region,macro
 5886,3,Trentino-Alto Adige,North
 5887,0,Lombardia,North
 5890,1,Campania,South
-5891,3,Lazio,Centre
 5893,0,Piemonte,North
 5894,0,Lombardia,North
 5896,2,Lombardia,North
@@ -3686,7 +3658,6 @@ Company ID,cluster,region,macro
 5907,1,Emilia-Romagna,North
 5908,2,Liguria,North
 5909,2,Veneto,North
-5910,3,Lombardia,North
 5911,1,Umbria,Centre
 5912,2,Abruzzo,South
 5913,1,Sardegna,Islands
@@ -3837,13 +3808,11 @@ Company ID,cluster,region,macro
 6145,2,Umbria,Centre
 6146,2,Veneto,North
 6147,0,Lombardia,North
-6148,3,Veneto,North
 6150,2,Abruzzo,South
-6154,3,Emilia-Romagna,North
+6154,2,Emilia-Romagna,North
 6156,3,Lombardia,North
 6157,1,Lombardia,North
 6158,0,Abruzzo,South
-6159,3,Lombardia,North
 6160,4,Emilia-Romagna,North
 6161,0,Lazio,Centre
 6162,1,Lombardia,North
@@ -4094,7 +4063,7 @@ Company ID,cluster,region,macro
 6560,3,Puglia,South
 6561,1,Veneto,North
 6562,3,Lazio,Centre
-6563,3,Lombardia,North
+6563,0,Lombardia,North
 6564,3,Lombardia,North
 6565,2,Campania,South
 6566,0,Friuli-Venezia Giulia,North
@@ -4134,7 +4103,7 @@ Company ID,cluster,region,macro
 6618,2,Calabria,South
 6620,4,Lombardia,North
 6621,3,Sicilia,Islands
-6624,1,Veneto,North
+6624,3,Veneto,North
 6625,4,Veneto,North
 6629,0,Campania,South
 6631,1,Lombardia,North
@@ -4378,7 +4347,6 @@ Company ID,cluster,region,macro
 7013,1,Lazio,Centre
 7014,3,Piemonte,North
 7016,0,Liguria,North
-7018,3,Toscana,Centre
 7019,2,Lombardia,North
 7020,0,Emilia-Romagna,North
 7021,2,Lombardia,North
@@ -4406,7 +4374,7 @@ Company ID,cluster,region,macro
 7059,0,Veneto,North
 7060,3,Lombardia,North
 7061,1,Lombardia,North
-7068,3,Lombardia,North
+7068,2,Lombardia,North
 7069,0,Emilia-Romagna,North
 7070,0,Lombardia,North
 7071,0,Lazio,Centre
@@ -4504,7 +4472,7 @@ Company ID,cluster,region,macro
 7223,3,Lombardia,North
 7226,2,Lombardia,North
 7227,3,Emilia-Romagna,North
-7230,3,Trentino-Alto Adige,North
+7230,0,Trentino-Alto Adige,North
 7233,1,Lombardia,North
 7234,0,Campania,South
 7238,3,Lombardia,North
@@ -4546,7 +4514,7 @@ Company ID,cluster,region,macro
 7292,4,Campania,South
 7299,3,Veneto,North
 7302,3,Lombardia,North
-7303,1,Marche,Centre
+7303,3,Marche,Centre
 7305,0,Campania,South
 7306,1,Campania,South
 7309,3,Lombardia,North
@@ -4554,7 +4522,6 @@ Company ID,cluster,region,macro
 7312,2,Lombardia,North
 7314,3,Puglia,South
 7315,0,Calabria,South
-7316,3,Emilia-Romagna,North
 7317,1,Emilia-Romagna,North
 7320,3,Piemonte,North
 7322,1,Lombardia,North
@@ -4644,7 +4611,7 @@ Company ID,cluster,region,macro
 7464,2,Lombardia,North
 7465,3,Lazio,Centre
 7466,4,Puglia,South
-7467,3,Emilia-Romagna,North
+7467,0,Emilia-Romagna,North
 7468,0,Sicilia,Islands
 7473,3,Piemonte,North
 7474,3,Campania,South
@@ -4706,7 +4673,7 @@ Company ID,cluster,region,macro
 7554,1,Toscana,Centre
 7555,0,Puglia,South
 7556,0,Veneto,North
-7557,3,Veneto,North
+7557,0,Veneto,North
 7559,4,Sardegna,Islands
 7560,1,Emilia-Romagna,North
 7561,2,Abruzzo,South
@@ -4748,7 +4715,7 @@ Company ID,cluster,region,macro
 7617,1,Lombardia,North
 7619,1,Piemonte,North
 7621,2,Veneto,North
-7622,0,Friuli-Venezia Giulia,North
+7622,2,Friuli-Venezia Giulia,North
 7623,3,Sicilia,Islands
 7624,2,Puglia,South
 7626,0,Abruzzo,South
@@ -4842,7 +4809,7 @@ Company ID,cluster,region,macro
 7773,3,Sicilia,Islands
 7775,1,Veneto,North
 7778,3,Lombardia,North
-7780,0,Liguria,North
+7780,1,Liguria,North
 7781,2,Emilia-Romagna,North
 7782,2,Campania,South
 7785,2,Lombardia,North
@@ -4910,11 +4877,10 @@ Company ID,cluster,region,macro
 7884,1,Campania,South
 7885,0,Emilia-Romagna,North
 7888,0,Lazio,Centre
-7889,3,Friuli-Venezia Giulia,North
+7889,0,Friuli-Venezia Giulia,North
 7890,4,Veneto,North
 7892,0,Emilia-Romagna,North
 7893,3,Lombardia,North
-7894,3,Calabria,South
 7895,0,Trentino-Alto Adige,North
 7896,0,Campania,South
 7897,0,Lazio,Centre
@@ -4948,7 +4914,6 @@ Company ID,cluster,region,macro
 7941,0,Lombardia,North
 7942,0,Liguria,North
 7944,4,Toscana,Centre
-7945,3,Lazio,Centre
 7947,1,Veneto,North
 7948,3,Lombardia,North
 7949,1,Piemonte,North
@@ -4974,7 +4939,7 @@ Company ID,cluster,region,macro
 7976,4,Piemonte,North
 7977,2,Lombardia,North
 7979,0,Toscana,Centre
-7980,3,Friuli-Venezia Giulia,North
+7980,2,Friuli-Venezia Giulia,North
 7981,2,Lazio,Centre
 7983,1,Campania,South
 7984,2,Trentino-Alto Adige,North
@@ -5003,7 +4968,7 @@ Company ID,cluster,region,macro
 8024,3,Toscana,Centre
 8027,2,Sicilia,Islands
 8030,0,Lombardia,North
-8031,3,Veneto,North
+8031,0,Veneto,North
 8032,0,Liguria,North
 8033,0,Marche,Centre
 8037,1,Lazio,Centre
@@ -5109,14 +5074,12 @@ Company ID,cluster,region,macro
 8186,0,Lombardia,North
 8187,3,Piemonte,North
 8189,0,Lazio,Centre
-8190,3,Trentino-Alto Adige,North
 8191,3,Lombardia,North
 8194,3,Marche,Centre
 8195,2,Lombardia,North
 8197,1,Lombardia,North
 8198,3,Emilia-Romagna,North
 8199,2,Veneto,North
-8200,3,Emilia-Romagna,North
 8201,0,Campania,South
 8202,4,Lombardia,North
 8204,1,Umbria,Centre
@@ -5168,7 +5131,6 @@ Company ID,cluster,region,macro
 8276,1,Lombardia,North
 8281,0,Friuli-Venezia Giulia,North
 8282,4,Lazio,Centre
-8283,3,Emilia-Romagna,North
 8284,3,Lombardia,North
 8287,1,Lombardia,North
 8288,1,Veneto,North
@@ -5229,7 +5191,7 @@ Company ID,cluster,region,macro
 8368,1,Sicilia,Islands
 8375,1,Lombardia,North
 8376,0,Veneto,North
-8378,0,Piemonte,North
+8378,2,Piemonte,North
 8379,2,Lombardia,North
 8381,0,Lombardia,North
 8383,2,Campania,South
@@ -5290,7 +5252,7 @@ Company ID,cluster,region,macro
 8487,2,Lombardia,North
 8489,2,Veneto,North
 8490,0,Veneto,North
-8491,1,Puglia,South
+8491,3,Puglia,South
 8492,3,Lazio,Centre
 8494,2,Lazio,Centre
 8495,0,Lombardia,North
@@ -5307,7 +5269,7 @@ Company ID,cluster,region,macro
 8514,3,Liguria,North
 8515,2,Puglia,South
 8518,2,Abruzzo,South
-8520,3,Emilia-Romagna,North
+8520,0,Emilia-Romagna,North
 8522,0,Friuli-Venezia Giulia,North
 8525,4,Emilia-Romagna,North
 8526,2,Lombardia,North
@@ -5395,14 +5357,13 @@ Company ID,cluster,region,macro
 8645,0,Veneto,North
 8646,3,Lombardia,North
 8647,3,Lombardia,North
-8648,3,Trentino-Alto Adige,North
 8649,2,Puglia,South
 8650,3,Lombardia,North
 8651,0,Veneto,North
 8652,3,Lombardia,North
 8654,3,Emilia-Romagna,North
 8655,0,Sicilia,Islands
-8658,0,Lombardia,North
+8658,2,Lombardia,North
 8659,1,Lazio,Centre
 8661,0,Toscana,Centre
 8664,0,Toscana,Centre
@@ -5471,10 +5432,9 @@ Company ID,cluster,region,macro
 8766,4,Lombardia,North
 8767,4,Abruzzo,South
 8768,1,Calabria,South
-8769,3,Lazio,Centre
+8769,0,Lazio,Centre
 8772,0,Lombardia,North
 8774,1,Calabria,South
-8775,3,Lombardia,North
 8776,1,Lombardia,North
 8777,0,Abruzzo,South
 8778,2,Campania,South
@@ -5526,7 +5486,6 @@ Company ID,cluster,region,macro
 8842,3,Toscana,Centre
 8844,2,Emilia-Romagna,North
 8845,0,Lombardia,North
-8846,3,Marche,Centre
 8847,3,Lombardia,North
 8848,1,Lombardia,North
 8849,3,Lombardia,North
@@ -5563,7 +5522,7 @@ Company ID,cluster,region,macro
 8898,3,Campania,South
 8899,2,Lombardia,North
 8900,2,Abruzzo,South
-8902,3,Emilia-Romagna,North
+8902,2,Emilia-Romagna,North
 8903,3,Lazio,Centre
 8906,0,Umbria,Centre
 8908,2,Lombardia,North
@@ -5589,7 +5548,6 @@ Company ID,cluster,region,macro
 8938,2,Lazio,Centre
 8939,2,Campania,South
 8940,2,Emilia-Romagna,North
-8941,3,Lombardia,North
 8945,3,Sicilia,Islands
 8948,2,Campania,South
 8949,3,Toscana,Centre
@@ -5621,7 +5579,7 @@ Company ID,cluster,region,macro
 8995,3,Lombardia,North
 8997,3,Toscana,Centre
 8998,2,Campania,South
-8999,1,Lazio,Centre
+8999,3,Lazio,Centre
 9001,3,Lazio,Centre
 9002,3,Lombardia,North
 9006,0,Emilia-Romagna,North
@@ -5715,10 +5673,10 @@ Company ID,cluster,region,macro
 9144,1,Piemonte,North
 9145,1,Sicilia,Islands
 9146,3,Lazio,Centre
-9147,1,Campania,South
+9147,0,Campania,South
 9149,1,Umbria,Centre
 9150,0,Veneto,North
-9151,1,Lombardia,North
+9151,3,Lombardia,North
 9152,2,Campania,South
 9155,0,Campania,South
 9158,2,Lombardia,North
@@ -5797,7 +5755,7 @@ Company ID,cluster,region,macro
 9265,1,Trentino-Alto Adige,North
 9266,2,Lombardia,North
 9267,2,Campania,South
-9268,3,Piemonte,North
+9268,0,Piemonte,North
 9269,0,Piemonte,North
 9273,3,Campania,South
 9274,2,Lazio,Centre
@@ -5818,7 +5776,6 @@ Company ID,cluster,region,macro
 9295,0,Lombardia,North
 9297,0,Veneto,North
 9298,2,Lombardia,North
-9300,3,Lombardia,North
 9301,3,Lombardia,North
 9303,0,Campania,South
 9304,0,Lombardia,North
@@ -5850,7 +5807,6 @@ Company ID,cluster,region,macro
 9351,0,Emilia-Romagna,North
 9353,0,Campania,South
 9356,0,Trentino-Alto Adige,North
-9357,3,Lombardia,North
 9358,1,Lombardia,North
 9359,2,Sicilia,Islands
 9360,0,Lombardia,North
@@ -5980,8 +5936,7 @@ Company ID,cluster,region,macro
 9558,0,Piemonte,North
 9560,3,Trentino-Alto Adige,North
 9561,3,Toscana,Centre
-9563,4,Calabria,South
-9565,3,Piemonte,North
+9563,1,Calabria,South
 9566,1,Puglia,South
 9567,2,Veneto,North
 9568,2,Sicilia,Islands
@@ -6118,7 +6073,7 @@ Company ID,cluster,region,macro
 9778,0,Campania,South
 9779,1,Campania,South
 9781,1,Lombardia,North
-9784,3,Emilia-Romagna,North
+9784,2,Emilia-Romagna,North
 9787,0,Calabria,South
 9788,2,Puglia,South
 9790,0,Emilia-Romagna,North
@@ -6159,7 +6114,7 @@ Company ID,cluster,region,macro
 9848,1,Lombardia,North
 9851,0,Lombardia,North
 9852,0,Campania,South
-9854,3,Lazio,Centre
+9854,2,Lazio,Centre
 9857,2,Lazio,Centre
 9858,1,Campania,South
 9860,0,Campania,South
@@ -6242,7 +6197,7 @@ Company ID,cluster,region,macro
 9984,0,Lazio,Centre
 9985,3,Toscana,Centre
 9986,0,Lazio,Centre
-9987,1,Campania,South
+9987,3,Campania,South
 9988,3,Lombardia,North
 9993,4,Lombardia,North
 9994,1,Toscana,Centre
@@ -6277,7 +6232,6 @@ Company ID,cluster,region,macro
 10041,0,Veneto,North
 10043,1,Lombardia,North
 10045,0,Emilia-Romagna,North
-10046,3,Lombardia,North
 10047,2,Campania,South
 10048,3,Toscana,Centre
 10051,0,Lombardia,North
@@ -6296,7 +6250,7 @@ Company ID,cluster,region,macro
 10069,3,Veneto,North
 10070,2,Lombardia,North
 10071,0,Emilia-Romagna,North
-10072,3,Lombardia,North
+10072,2,Lombardia,North
 10073,4,Lazio,Centre
 10074,1,Veneto,North
 10076,3,Liguria,North
@@ -6395,7 +6349,6 @@ Company ID,cluster,region,macro
 10236,0,Sicilia,Islands
 10237,3,Lombardia,North
 10238,0,Friuli-Venezia Giulia,North
-10241,3,Emilia-Romagna,North
 10243,2,Emilia-Romagna,North
 10244,0,Veneto,North
 10245,1,Lombardia,North
@@ -6446,7 +6399,7 @@ Company ID,cluster,region,macro
 10326,4,Campania,South
 10330,0,Lombardia,North
 10331,3,Piemonte,North
-10333,3,Lazio,Centre
+10333,2,Lazio,Centre
 10334,0,Emilia-Romagna,North
 10335,2,Veneto,North
 10336,3,Lombardia,North
@@ -6473,7 +6426,7 @@ Company ID,cluster,region,macro
 10367,1,Marche,Centre
 10368,3,Lazio,Centre
 10369,2,Piemonte,North
-10370,0,Basilicata,South
+10370,2,Basilicata,South
 10372,1,Lombardia,North
 10373,2,Lazio,Centre
 10374,2,Trentino-Alto Adige,North
@@ -6566,7 +6519,6 @@ Company ID,cluster,region,macro
 10515,1,Calabria,South
 10517,0,Basilicata,South
 10518,2,Piemonte,North
-10521,3,Calabria,South
 10522,3,Lombardia,North
 10526,1,Emilia-Romagna,North
 10527,0,Lombardia,North
@@ -6631,7 +6583,7 @@ Company ID,cluster,region,macro
 10628,1,Piemonte,North
 10629,0,Emilia-Romagna,North
 10631,3,Emilia-Romagna,North
-10632,3,Calabria,South
+10632,0,Calabria,South
 10633,3,Lombardia,North
 10635,3,Toscana,Centre
 10636,2,Lombardia,North
@@ -6661,7 +6613,6 @@ Company ID,cluster,region,macro
 10672,0,Trentino-Alto Adige,North
 10673,1,Lombardia,North
 10674,1,Sardegna,Islands
-10675,3,Emilia-Romagna,North
 10676,4,Lazio,Centre
 10678,2,Sicilia,Islands
 10679,2,Veneto,North
@@ -6717,7 +6668,7 @@ Company ID,cluster,region,macro
 10762,0,Sicilia,Islands
 10765,3,Lombardia,North
 10766,0,Lombardia,North
-10769,0,Veneto,North
+10769,2,Veneto,North
 10771,1,Piemonte,North
 10772,1,Lombardia,North
 10774,3,Calabria,South
@@ -6795,7 +6746,7 @@ Company ID,cluster,region,macro
 10899,4,Sicilia,Islands
 10901,4,Emilia-Romagna,North
 10905,2,Veneto,North
-10906,1,Veneto,North
+10906,3,Veneto,North
 10907,2,Lazio,Centre
 10909,2,Piemonte,North
 10910,0,Veneto,North
@@ -6828,9 +6779,8 @@ Company ID,cluster,region,macro
 10948,0,Abruzzo,South
 10950,3,Lombardia,North
 10952,3,Lombardia,North
-10953,0,Lazio,Centre
+10953,1,Lazio,Centre
 10955,1,Emilia-Romagna,North
-10956,3,Veneto,North
 10959,2,Emilia-Romagna,North
 10960,4,Campania,South
 10961,1,Toscana,Centre
@@ -6944,7 +6894,7 @@ Company ID,cluster,region,macro
 11112,0,Trentino-Alto Adige,North
 11113,1,Toscana,Centre
 11114,0,Campania,South
-11117,3,Puglia,South
+11117,0,Puglia,South
 11119,0,Veneto,North
 11120,2,Lombardia,North
 11121,2,Liguria,North
@@ -7002,13 +6952,12 @@ Company ID,cluster,region,macro
 11211,0,Campania,South
 11212,0,Umbria,Centre
 11213,3,Lombardia,North
-11214,1,Toscana,Centre
+11214,3,Toscana,Centre
 11215,0,Lombardia,North
 11217,0,Emilia-Romagna,North
 11222,0,Lombardia,North
 11223,0,Lombardia,North
 11227,1,Toscana,Centre
-11228,3,Toscana,Centre
 11231,2,Umbria,Centre
 11232,2,Toscana,Centre
 11237,4,Lombardia,North
@@ -7122,7 +7071,6 @@ Company ID,cluster,region,macro
 11409,3,Emilia-Romagna,North
 11411,2,Veneto,North
 11412,0,Puglia,South
-11414,3,Lombardia,North
 11415,0,Veneto,North
 11416,4,Veneto,North
 11417,1,Lazio,Centre
@@ -7233,7 +7181,7 @@ Company ID,cluster,region,macro
 11582,0,Lombardia,North
 11583,1,Veneto,North
 11585,2,Lombardia,North
-11586,2,Piemonte,North
+11586,0,Piemonte,North
 11587,0,Puglia,South
 11588,2,Veneto,North
 11590,1,Piemonte,North
@@ -7264,16 +7212,16 @@ Company ID,cluster,region,macro
 11624,4,Marche,Centre
 11625,4,Marche,Centre
 11627,0,Veneto,North
-11628,3,Lombardia,North
+11628,2,Lombardia,North
 11629,2,Marche,Centre
 11631,0,Lazio,Centre
-11632,1,Lombardia,North
+11632,0,Lombardia,North
 11636,3,Veneto,North
 11637,4,Lazio,Centre
 11639,0,Lombardia,North
 11642,0,Piemonte,North
 11645,2,Lombardia,North
-11648,3,Puglia,South
+11648,0,Puglia,South
 11649,1,Lazio,Centre
 11651,0,Toscana,Centre
 11652,3,Lombardia,North
@@ -7431,7 +7379,7 @@ Company ID,cluster,region,macro
 11901,2,Emilia-Romagna,North
 11902,0,Veneto,North
 11903,2,Emilia-Romagna,North
-11904,3,Toscana,Centre
+11904,0,Toscana,Centre
 11905,3,Lombardia,North
 11906,3,Lombardia,North
 11909,0,Piemonte,North
@@ -7495,7 +7443,6 @@ Company ID,cluster,region,macro
 11991,2,Emilia-Romagna,North
 11992,3,Campania,South
 11993,2,Veneto,North
-11995,3,Lazio,Centre
 11996,2,Puglia,South
 11999,0,Toscana,Centre
 12000,1,Friuli-Venezia Giulia,North
@@ -7551,7 +7498,6 @@ Company ID,cluster,region,macro
 12080,3,Veneto,North
 12083,4,Marche,Centre
 12085,2,Campania,South
-12086,3,Marche,Centre
 12089,0,Emilia-Romagna,North
 12092,0,Emilia-Romagna,North
 12094,3,Lombardia,North
@@ -7615,7 +7561,7 @@ Company ID,cluster,region,macro
 12196,0,Lazio,Centre
 12198,1,Toscana,Centre
 12200,3,Lombardia,North
-12201,1,Campania,South
+12201,3,Campania,South
 12203,2,Calabria,South
 12205,1,Emilia-Romagna,North
 12208,2,Lombardia,North
@@ -7635,7 +7581,7 @@ Company ID,cluster,region,macro
 12227,0,Piemonte,North
 12228,3,Lombardia,North
 12229,2,Veneto,North
-12230,3,Veneto,North
+12230,0,Veneto,North
 12232,2,Emilia-Romagna,North
 12235,0,Lombardia,North
 12236,1,Campania,South
@@ -7647,7 +7593,6 @@ Company ID,cluster,region,macro
 12247,1,Marche,Centre
 12249,0,Sicilia,Islands
 12251,3,Campania,South
-12252,3,Friuli-Venezia Giulia,North
 12253,0,Campania,South
 12254,1,Piemonte,North
 12259,1,Emilia-Romagna,North
@@ -7691,9 +7636,7 @@ Company ID,cluster,region,macro
 12323,3,Emilia-Romagna,North
 12324,3,Toscana,Centre
 12325,0,Veneto,North
-12326,3,Lombardia,North
 12327,2,Lazio,Centre
-12329,3,Emilia-Romagna,North
 12331,1,Sicilia,Islands
 12333,4,Veneto,North
 12334,2,Lombardia,North
@@ -7753,7 +7696,7 @@ Company ID,cluster,region,macro
 12414,2,Emilia-Romagna,North
 12415,0,Puglia,South
 12416,1,Toscana,Centre
-12418,4,Lazio,Centre
+12418,1,Lazio,Centre
 12420,1,Lombardia,North
 12421,1,Lombardia,North
 12422,0,Basilicata,South
@@ -7793,7 +7736,7 @@ Company ID,cluster,region,macro
 12477,3,Lombardia,North
 12478,3,Sardegna,Islands
 12481,1,Lombardia,North
-12483,4,Toscana,Centre
+12483,1,Toscana,Centre
 12484,4,Lombardia,North
 12487,3,Lazio,Centre
 12488,1,Piemonte,North
@@ -7835,7 +7778,6 @@ Company ID,cluster,region,macro
 12548,3,Lombardia,North
 12551,3,Lombardia,North
 12553,0,Emilia-Romagna,North
-12555,3,Lombardia,North
 12556,2,Lombardia,North
 12559,2,Abruzzo,South
 12560,1,Lombardia,North
@@ -8082,7 +8024,6 @@ Company ID,cluster,region,macro
 12934,3,Lazio,Centre
 12935,3,Lombardia,North
 12938,2,Veneto,North
-12939,3,Veneto,North
 12940,1,Lombardia,North
 12941,1,Lombardia,North
 12943,0,Lombardia,North
@@ -8103,7 +8044,7 @@ Company ID,cluster,region,macro
 12964,2,Sicilia,Islands
 12965,3,Toscana,Centre
 12966,1,Lazio,Centre
-12967,3,Veneto,North
+12967,2,Veneto,North
 12968,1,Lazio,Centre
 12969,0,Trentino-Alto Adige,North
 12970,0,Lombardia,North
@@ -8292,7 +8233,6 @@ Company ID,cluster,region,macro
 13258,1,Piemonte,North
 13259,0,Piemonte,North
 13260,0,Lombardia,North
-13263,1,Lombardia,North
 13264,1,Veneto,North
 13265,3,Emilia-Romagna,North
 13268,0,Lazio,Centre
@@ -8344,7 +8284,6 @@ Company ID,cluster,region,macro
 13345,1,Lombardia,North
 13346,0,Lazio,Centre
 13347,1,Marche,Centre
-13348,3,Lombardia,North
 13349,2,Lombardia,North
 13350,1,Veneto,North
 13351,0,Piemonte,North
@@ -8482,7 +8421,7 @@ Company ID,cluster,region,macro
 13552,3,Lombardia,North
 13554,0,Lombardia,North
 13556,3,Toscana,Centre
-13557,1,Puglia,South
+13557,3,Puglia,South
 13558,0,Campania,South
 13560,0,Emilia-Romagna,North
 13561,4,Lombardia,North
@@ -8519,7 +8458,7 @@ Company ID,cluster,region,macro
 13618,0,Veneto,North
 13620,4,Sardegna,Islands
 13622,0,Puglia,South
-13623,3,Friuli-Venezia Giulia,North
+13623,0,Friuli-Venezia Giulia,North
 13624,1,Sicilia,Islands
 13625,1,Lombardia,North
 13631,3,Calabria,South
@@ -8530,7 +8469,7 @@ Company ID,cluster,region,macro
 13639,1,Lombardia,North
 13640,2,Lombardia,North
 13642,1,Marche,Centre
-13644,3,Marche,Centre
+13644,2,Marche,Centre
 13645,2,Abruzzo,South
 13647,2,Piemonte,North
 13648,1,Lazio,Centre
@@ -8721,7 +8660,7 @@ Company ID,cluster,region,macro
 13964,4,Umbria,Centre
 13965,1,Toscana,Centre
 13967,3,Lombardia,North
-13968,3,Lombardia,North
+13968,2,Lombardia,North
 13969,0,Campania,South
 13970,2,Sardegna,Islands
 13971,3,Veneto,North
@@ -8825,18 +8764,18 @@ Company ID,cluster,region,macro
 14140,1,Veneto,North
 14142,2,Emilia-Romagna,North
 14143,1,Toscana,Centre
-14145,3,Lombardia,North
+14145,2,Lombardia,North
 14146,1,Veneto,North
 14150,1,Puglia,South
 14151,1,Lombardia,North
 14154,0,Piemonte,North
-14156,3,Veneto,North
+14156,2,Veneto,North
 14157,3,Lombardia,North
 14158,4,Marche,Centre
 14159,2,Lombardia,North
 14160,2,Lombardia,North
 14161,2,Toscana,Centre
-14162,3,Piemonte,North
+14162,2,Piemonte,North
 14165,3,Lombardia,North
 14166,0,Emilia-Romagna,North
 14167,0,Piemonte,North
@@ -9090,11 +9029,10 @@ Company ID,cluster,region,macro
 14558,1,Piemonte,North
 14559,2,Veneto,North
 14560,2,Lombardia,North
-14561,1,Calabria,South
+14561,0,Calabria,South
 14562,0,Lazio,Centre
 14563,2,Veneto,North
-14565,3,Toscana,Centre
-14566,1,Veneto,North
+14566,0,Veneto,North
 14568,1,Toscana,Centre
 14573,1,Lombardia,North
 14574,2,Lombardia,North
@@ -9150,7 +9088,6 @@ Company ID,cluster,region,macro
 14653,0,Campania,South
 14654,0,Lombardia,North
 14656,0,Lombardia,North
-14657,3,Lombardia,North
 14658,0,Sicilia,Islands
 14659,1,Campania,South
 14660,4,Lazio,Centre
@@ -9217,7 +9154,7 @@ Company ID,cluster,region,macro
 14754,0,Trentino-Alto Adige,North
 14759,0,Toscana,Centre
 14760,0,Lombardia,North
-14761,3,Trentino-Alto Adige,North
+14761,0,Trentino-Alto Adige,North
 14765,2,Toscana,Centre
 14766,3,Trentino-Alto Adige,North
 14767,1,Sardegna,Islands
@@ -9231,7 +9168,6 @@ Company ID,cluster,region,macro
 14777,0,Emilia-Romagna,North
 14778,0,Lazio,Centre
 14779,4,Veneto,North
-14781,3,Lombardia,North
 14783,1,Lombardia,North
 14784,3,Veneto,North
 14785,0,Abruzzo,South
@@ -9258,7 +9194,6 @@ Company ID,cluster,region,macro
 14813,2,Piemonte,North
 14814,1,Emilia-Romagna,North
 14815,2,Lombardia,North
-14817,3,Lazio,Centre
 14818,0,Piemonte,North
 14819,0,Piemonte,North
 14821,3,Lazio,Centre
@@ -9303,7 +9238,6 @@ Company ID,cluster,region,macro
 14890,2,Puglia,South
 14891,3,Friuli-Venezia Giulia,North
 14892,1,Calabria,South
-14895,1,Piemonte,North
 14896,1,Sicilia,Islands
 14897,0,Lombardia,North
 14898,1,Lazio,Centre
@@ -9464,7 +9398,6 @@ Company ID,cluster,region,macro
 15137,2,Veneto,North
 15138,1,Toscana,Centre
 15139,1,Campania,South
-15142,3,Lombardia,North
 15143,0,Veneto,North
 15144,3,Veneto,North
 15145,3,Lombardia,North
@@ -9524,7 +9457,6 @@ Company ID,cluster,region,macro
 15225,2,Lombardia,North
 15226,0,Emilia-Romagna,North
 15227,1,Friuli-Venezia Giulia,North
-15228,3,Marche,Centre
 15229,3,Piemonte,North
 15230,0,Trentino-Alto Adige,North
 15231,3,Lombardia,North
@@ -9535,12 +9467,12 @@ Company ID,cluster,region,macro
 15240,0,Lombardia,North
 15241,1,Sardegna,Islands
 15242,3,Abruzzo,South
-15243,1,Campania,South
+15243,3,Campania,South
 15244,2,Lazio,Centre
 15247,1,Lombardia,North
 15248,2,Veneto,North
 15249,1,Puglia,South
-15252,3,Friuli-Venezia Giulia,North
+15252,2,Friuli-Venezia Giulia,North
 15253,1,Lazio,Centre
 15254,3,Puglia,South
 15255,2,Sicilia,Islands
@@ -9653,7 +9585,7 @@ Company ID,cluster,region,macro
 15434,1,Veneto,North
 15435,4,Lombardia,North
 15436,3,Piemonte,North
-15437,1,Liguria,North
+15437,3,Liguria,North
 15438,0,Veneto,North
 15440,3,Campania,South
 15441,4,Toscana,Centre
@@ -9727,7 +9659,6 @@ Company ID,cluster,region,macro
 15545,0,Sicilia,Islands
 15547,2,Lombardia,North
 15548,0,Umbria,Centre
-15550,1,Lazio,Centre
 15551,4,Lombardia,North
 15552,0,Lombardia,North
 15554,4,Lombardia,North
@@ -9916,7 +9847,7 @@ Company ID,cluster,region,macro
 15828,0,Trentino-Alto Adige,North
 15829,0,Piemonte,North
 15832,0,Lombardia,North
-15835,3,Veneto,North
+15835,2,Veneto,North
 15836,3,Lombardia,North
 15837,2,Lombardia,North
 15838,2,Veneto,North
@@ -9967,7 +9898,6 @@ Company ID,cluster,region,macro
 15912,1,Lombardia,North
 15913,1,Lombardia,North
 15915,0,Emilia-Romagna,North
-15916,1,Veneto,North
 15917,1,Sicilia,Islands
 15918,3,Veneto,North
 15921,2,Toscana,Centre
@@ -9995,7 +9925,7 @@ Company ID,cluster,region,macro
 15957,0,Lombardia,North
 15958,3,Lombardia,North
 15959,1,Puglia,South
-15962,3,Lombardia,North
+15962,0,Lombardia,North
 15963,4,Veneto,North
 15964,1,Lazio,Centre
 15965,0,Puglia,South
@@ -10150,7 +10080,6 @@ Company ID,cluster,region,macro
 16219,1,Lombardia,North
 16220,3,Emilia-Romagna,North
 16221,0,Umbria,Centre
-16223,3,Veneto,North
 16224,0,Sicilia,Islands
 16226,1,Emilia-Romagna,North
 16228,2,Lombardia,North
@@ -10216,7 +10145,7 @@ Company ID,cluster,region,macro
 16314,2,Piemonte,North
 16315,1,Lazio,Centre
 16317,2,Veneto,North
-16318,0,Toscana,Centre
+16318,2,Toscana,Centre
 16319,2,Lombardia,North
 16320,0,Lombardia,North
 16321,1,Veneto,North
@@ -10312,7 +10241,7 @@ Company ID,cluster,region,macro
 16455,3,Veneto,North
 16461,0,Sicilia,Islands
 16462,3,Piemonte,North
-16463,3,Lombardia,North
+16463,2,Lombardia,North
 16464,0,Marche,Centre
 16467,2,Umbria,Centre
 16470,2,Lombardia,North
@@ -10342,7 +10271,7 @@ Company ID,cluster,region,macro
 16515,3,Sardegna,Islands
 16518,0,Lazio,Centre
 16519,0,Puglia,South
-16521,1,Marche,Centre
+16521,3,Marche,Centre
 16524,3,Lombardia,North
 16526,3,Liguria,North
 16527,1,Veneto,North
@@ -10365,7 +10294,7 @@ Company ID,cluster,region,macro
 16551,1,Marche,Centre
 16553,0,Lombardia,North
 16554,3,Emilia-Romagna,North
-16557,1,Lombardia,North
+16557,3,Lombardia,North
 16559,4,Toscana,Centre
 16561,1,Lazio,Centre
 16562,0,Lombardia,North
@@ -10377,7 +10306,6 @@ Company ID,cluster,region,macro
 16576,0,Lazio,Centre
 16577,2,Marche,Centre
 16578,1,Lazio,Centre
-16579,3,Lombardia,North
 16581,1,Lombardia,North
 16582,2,Sicilia,Islands
 16583,2,Lazio,Centre
@@ -10395,7 +10323,6 @@ Company ID,cluster,region,macro
 16604,1,Lazio,Centre
 16606,3,Lombardia,North
 16608,3,Emilia-Romagna,North
-16609,3,Marche,Centre
 16610,4,Lazio,Centre
 16612,0,Umbria,Centre
 16613,1,Abruzzo,South
@@ -10450,7 +10377,7 @@ Company ID,cluster,region,macro
 16683,0,Veneto,North
 16684,0,Emilia-Romagna,North
 16687,4,Lombardia,North
-16689,0,Lazio,Centre
+16689,2,Lazio,Centre
 16690,0,Umbria,Centre
 16692,3,Lombardia,North
 16693,1,Sardegna,Islands
@@ -10459,10 +10386,10 @@ Company ID,cluster,region,macro
 16698,1,Piemonte,North
 16699,1,Trentino-Alto Adige,North
 16701,1,Lombardia,North
-16704,3,Emilia-Romagna,North
+16704,2,Emilia-Romagna,North
 16706,0,Sicilia,Islands
 16708,2,Emilia-Romagna,North
-16709,4,Sicilia,Islands
+16709,1,Sicilia,Islands
 16710,4,Liguria,North
 16711,3,Piemonte,North
 16713,0,Campania,South
@@ -10514,7 +10441,7 @@ Company ID,cluster,region,macro
 16780,0,Toscana,Centre
 16781,4,Friuli-Venezia Giulia,North
 16782,0,Piemonte,North
-16783,1,Marche,Centre
+16783,0,Marche,Centre
 16785,2,Emilia-Romagna,North
 16786,0,Trentino-Alto Adige,North
 16788,4,Lombardia,North
@@ -10595,7 +10522,7 @@ Company ID,cluster,region,macro
 16903,0,Sardegna,Islands
 16907,0,Sicilia,Islands
 16911,2,Lombardia,North
-16912,1,Lombardia,North
+16912,3,Lombardia,North
 16913,4,Lombardia,North
 16915,0,Sicilia,Islands
 16916,2,Sicilia,Islands
@@ -10610,7 +10537,7 @@ Company ID,cluster,region,macro
 16931,0,Lazio,Centre
 16932,0,Lazio,Centre
 16933,0,Umbria,Centre
-16934,4,Friuli-Venezia Giulia,North
+16934,1,Friuli-Venezia Giulia,North
 16936,3,Emilia-Romagna,North
 16939,0,Lombardia,North
 16940,2,Trentino-Alto Adige,North
@@ -10675,7 +10602,7 @@ Company ID,cluster,region,macro
 17035,0,Calabria,South
 17037,1,Lombardia,North
 17040,0,Veneto,North
-17042,0,Puglia,South
+17042,2,Puglia,South
 17043,0,Piemonte,North
 17045,2,Piemonte,North
 17047,0,Veneto,North
@@ -10686,13 +10613,12 @@ Company ID,cluster,region,macro
 17052,0,Lazio,Centre
 17053,0,Emilia-Romagna,North
 17057,1,Emilia-Romagna,North
-17058,3,Lombardia,North
 17060,1,Lombardia,North
 17062,0,Piemonte,North
 17063,2,Veneto,North
 17066,0,Calabria,South
 17070,4,Puglia,South
-17072,1,Lombardia,North
+17072,3,Lombardia,North
 17073,2,Friuli-Venezia Giulia,North
 17077,0,Emilia-Romagna,North
 17078,3,Lombardia,North
@@ -10848,7 +10774,7 @@ Company ID,cluster,region,macro
 17336,1,Lazio,Centre
 17337,3,Lombardia,North
 17339,3,Campania,South
-17340,1,Toscana,Centre
+17340,3,Toscana,Centre
 17341,2,Veneto,North
 17342,0,Marche,Centre
 17343,4,Emilia-Romagna,North
@@ -10988,7 +10914,6 @@ Company ID,cluster,region,macro
 17590,0,Puglia,South
 17591,0,Lazio,Centre
 17592,3,Lombardia,North
-17593,4,Lombardia,North
 17595,2,Lombardia,North
 17597,1,Lazio,Centre
 17598,3,Veneto,North
@@ -11004,7 +10929,7 @@ Company ID,cluster,region,macro
 17614,1,Campania,South
 17615,3,Piemonte,North
 17622,0,Piemonte,North
-17624,1,Toscana,Centre
+17624,3,Toscana,Centre
 17625,2,Toscana,Centre
 17627,3,Lazio,Centre
 17628,1,Marche,Centre
@@ -11039,7 +10964,7 @@ Company ID,cluster,region,macro
 17669,4,Lombardia,North
 17671,3,Lombardia,North
 17672,3,Puglia,South
-17674,3,Veneto,North
+17674,2,Veneto,North
 17675,1,Campania,South
 17676,1,Sicilia,Islands
 17677,0,Trentino-Alto Adige,North
@@ -11155,7 +11080,7 @@ Company ID,cluster,region,macro
 17848,0,Puglia,South
 17850,1,Puglia,South
 17852,3,Lombardia,North
-17853,3,Veneto,North
+17853,0,Veneto,North
 17855,3,Lombardia,North
 17856,4,Puglia,South
 17857,1,Emilia-Romagna,North
@@ -11262,7 +11187,6 @@ Company ID,cluster,region,macro
 18023,0,Puglia,South
 18024,2,Puglia,South
 18025,1,Trentino-Alto Adige,North
-18027,3,Toscana,Centre
 18028,1,Toscana,Centre
 18029,2,Veneto,North
 18032,0,Marche,Centre
@@ -11282,7 +11206,6 @@ Company ID,cluster,region,macro
 18058,0,Lazio,Centre
 18059,4,Lombardia,North
 18061,0,Lombardia,North
-18062,3,Lombardia,North
 18064,1,Veneto,North
 18065,0,Veneto,North
 18067,0,Piemonte,North
@@ -11318,7 +11241,7 @@ Company ID,cluster,region,macro
 18117,2,Veneto,North
 18118,2,Emilia-Romagna,North
 18119,0,Lombardia,North
-18121,1,Campania,South
+18121,3,Campania,South
 18123,1,Lombardia,North
 18124,3,Umbria,Centre
 18125,0,Lombardia,North
@@ -11354,7 +11277,7 @@ Company ID,cluster,region,macro
 18166,3,Campania,South
 18167,4,Emilia-Romagna,North
 18168,0,Lombardia,North
-18169,4,Trentino-Alto Adige,North
+18169,1,Trentino-Alto Adige,North
 18172,1,Calabria,South
 18173,3,Marche,Centre
 18174,2,Emilia-Romagna,North
@@ -11483,7 +11406,7 @@ Company ID,cluster,region,macro
 18373,1,Veneto,North
 18374,2,Lazio,Centre
 18375,0,Sardegna,Islands
-18376,0,Abruzzo,South
+18376,2,Abruzzo,South
 18377,4,Lombardia,North
 18380,3,Veneto,North
 18383,0,Trentino-Alto Adige,North
@@ -11604,9 +11527,8 @@ Company ID,cluster,region,macro
 18572,0,Emilia-Romagna,North
 18573,2,Veneto,North
 18574,3,Lombardia,North
-18577,1,Lombardia,North
+18577,3,Lombardia,North
 18578,1,Emilia-Romagna,North
-18579,3,Lombardia,North
 18582,2,Piemonte,North
 18589,3,Veneto,North
 18592,4,Sicilia,Islands
@@ -11654,7 +11576,6 @@ Company ID,cluster,region,macro
 18668,0,Piemonte,North
 18669,3,Lazio,Centre
 18670,0,Lombardia,North
-18671,3,Lombardia,North
 18672,2,Lazio,Centre
 18673,0,Emilia-Romagna,North
 18674,0,Emilia-Romagna,North
@@ -11694,7 +11615,6 @@ Company ID,cluster,region,macro
 18730,1,Marche,Centre
 18733,1,Emilia-Romagna,North
 18734,1,Emilia-Romagna,North
-18735,3,Piemonte,North
 18736,2,Lombardia,North
 18737,2,Abruzzo,South
 18738,3,Veneto,North
@@ -11780,7 +11700,6 @@ Company ID,cluster,region,macro
 18865,3,Lombardia,North
 18867,0,Piemonte,North
 18868,2,Lombardia,North
-18869,3,Lombardia,North
 18871,0,Puglia,South
 18873,0,Lombardia,North
 18875,0,Campania,South
@@ -11791,7 +11710,7 @@ Company ID,cluster,region,macro
 18882,3,Lombardia,North
 18885,0,Lombardia,North
 18886,0,Toscana,Centre
-18887,3,Lombardia,North
+18887,2,Lombardia,North
 18888,1,Veneto,North
 18889,3,Liguria,North
 18890,3,Piemonte,North
@@ -11867,7 +11786,7 @@ Company ID,cluster,region,macro
 19006,2,Trentino-Alto Adige,North
 19008,3,Lombardia,North
 19009,1,Trentino-Alto Adige,North
-19011,0,Emilia-Romagna,North
+19011,2,Emilia-Romagna,North
 19012,2,Lazio,Centre
 19013,1,Emilia-Romagna,North
 19014,0,Lombardia,North
@@ -12098,7 +12017,7 @@ Company ID,cluster,region,macro
 19351,1,Toscana,Centre
 19352,3,Lombardia,North
 19355,1,Sardegna,Islands
-19361,3,Lombardia,North
+19361,2,Lombardia,North
 19362,2,Puglia,South
 19364,1,Piemonte,North
 19365,1,Veneto,North
@@ -12258,7 +12177,7 @@ Company ID,cluster,region,macro
 19606,0,Lombardia,North
 19615,3,Puglia,South
 19616,0,Emilia-Romagna,North
-19617,0,Veneto,North
+19617,2,Veneto,North
 19618,2,Lombardia,North
 19619,0,Lombardia,North
 19620,1,Veneto,North
@@ -12281,7 +12200,6 @@ Company ID,cluster,region,macro
 19644,0,Puglia,South
 19645,0,Toscana,Centre
 19648,4,Liguria,North
-19651,3,Lombardia,North
 19654,0,Lombardia,North
 19655,2,Umbria,Centre
 19656,0,Abruzzo,South
@@ -12347,7 +12265,6 @@ Company ID,cluster,region,macro
 19755,3,Lombardia,North
 19757,0,Calabria,South
 19758,1,Emilia-Romagna,North
-19759,3,Lombardia,North
 19762,1,Liguria,North
 19763,1,Veneto,North
 19764,0,Emilia-Romagna,North
@@ -12379,7 +12296,6 @@ Company ID,cluster,region,macro
 19814,2,Campania,South
 19815,1,Piemonte,North
 19816,4,Sicilia,Islands
-19817,3,Lombardia,North
 19818,2,Emilia-Romagna,North
 19819,2,Abruzzo,South
 19820,0,Sicilia,Islands
@@ -12397,10 +12313,10 @@ Company ID,cluster,region,macro
 19842,2,Veneto,North
 19843,1,Piemonte,North
 19844,0,Lazio,Centre
-19845,0,Lazio,Centre
+19845,1,Lazio,Centre
 19846,2,Lombardia,North
-19849,4,Sicilia,Islands
-19850,3,Emilia-Romagna,North
+19849,1,Sicilia,Islands
+19850,0,Emilia-Romagna,North
 19856,2,Veneto,North
 19857,3,Veneto,North
 19860,0,Liguria,North
@@ -12411,7 +12327,7 @@ Company ID,cluster,region,macro
 19867,0,Lombardia,North
 19871,0,Marche,Centre
 19872,2,Trentino-Alto Adige,North
-19874,3,Puglia,South
+19874,2,Puglia,South
 19875,0,Calabria,South
 19879,1,Sicilia,Islands
 19880,0,Lombardia,North
@@ -13070,7 +12986,6 @@ Company ID,cluster,region,macro
 8304,4,Lombardia,North
 8331,0,Toscana,Centre
 8359,4,Calabria,South
-8364,3,Piemonte,North
 8369,4,Piemonte,North
 8373,1,Veneto,North
 8380,1,Toscana,Centre
@@ -13175,7 +13090,7 @@ Company ID,cluster,region,macro
 9671,4,Lombardia,North
 9678,4,Lombardia,North
 9698,1,Abruzzo,South
-9702,1,Emilia-Romagna,North
+9702,0,Emilia-Romagna,North
 9709,4,Puglia,South
 9711,4,Lombardia,North
 9712,4,Lombardia,North
@@ -13588,7 +13503,7 @@ Company ID,cluster,region,macro
 14965,1,Friuli-Venezia Giulia,North
 14981,4,Lazio,Centre
 14989,1,Lazio,Centre
-14993,1,Toscana,Centre
+14993,3,Toscana,Centre
 15008,4,Piemonte,North
 15017,4,Veneto,North
 15034,4,Veneto,North

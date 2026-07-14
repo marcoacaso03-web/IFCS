@@ -104,6 +104,64 @@ metrics["unmapped_provinces"] = int((df["region"] == "Unknown").sum())
 metrics["region_counts"] = df["region"].value_counts().to_dict()
 
 # ----------------------------------------------------------------------------
+# DATA CLEANING - contextual outlier removal
+# Rule: a row is removed only if it has >=1 feature beyond a 3*IQR fence AND
+# ALL correlated features are INSIDE their fence (i.e. the extreme value is
+# incongruent with the rest of the firm's profile -> likely erroneous).
+# Coherent extremes (e.g. negative Net income WITH negative Operating Income
+# and cash flow) are KEPT: they are real distressed firms (relevant to Task B).
+# Also removed: Sales Revenue <= 0 (impossible).
+# ----------------------------------------------------------------------------
+FIN_RAW = ["Sales Revenue", "Employees", "Net income", "Operating Income",
+           "Maximum deductible amount", "Total financial expenses", "Tax shield",
+           "Operating cash flow", "Current taxes", "Alert Index"]
+# Fences computed on log1p-transformed data: financial variables are heavily
+# right-skewed, so a fence on raw values wrongly flags large (legitimate) firms.
+# log1p makes the distribution near-symmetric and the IQR fence meaningful.
+Xlg = df[FIN_RAW].copy()
+for c in FIN_RAW:
+    Xlg[c] = np.log1p(Xlg[c].clip(lower=0))
+Q1 = Xlg.quantile(0.25); Q3 = Xlg.quantile(0.75)
+IQR = Q3 - Q1
+LO = Q1 - 3 * IQR; HI = Q3 + 3 * IQR
+outside = (Xlg < LO) | (Xlg > HI)
+# correlated groups: if an extreme on one is matched by extremes on its drivers,
+# the row is coherent and must be KEPT.
+CORR = {
+    "Net income": ["Operating Income", "Operating cash flow"],
+    "Operating Income": ["Net income", "Operating cash flow"],
+    "Operating cash flow": ["Net income", "Operating Income"],
+    "Total financial expenses": ["Tax shield", "Net income"],
+    "Tax shield": ["Total financial expenses", "Net income"],
+    "Maximum deductible amount": ["Operating Income", "Net income"],
+    "Sales Revenue": ["Operating Income", "Net income"],
+    "Current taxes": ["Net income", "Operating Income"],
+    "Employees": ["Sales Revenue", "Operating Income"],
+    "Alert Index": ["Net income", "Operating Income"],
+}
+incongruent = pd.Series(False, index=df.index)
+for v in FIN_RAW:
+    rel_inside = ~outside[CORR[v]].any(axis=1)
+    incongruent |= (outside[v] & rel_inside)
+impossible = df["Sales Revenue"] <= 0
+clean_mask = ~(incongruent | impossible)
+metrics["cleaning"] = {
+    "rows_in": int(len(df)),
+    "removed_impossible_sales_le0": int(impossible.sum()),
+    "removed_incongruent_outlier": int(incongruent.sum()),
+    "rows_out": int(clean_mask.sum()),
+    "removed_total": int((~clean_mask).sum()),
+    "rule": "remove if any feature beyond 3*IQR on log1p AND all correlated features inside fence (incongruent); plus Sales<=0",
+}
+df = df[clean_mask].reset_index(drop=True)
+
+# Recompute headline counts on the cleaned frame
+n = len(df)
+metrics["n_firms"] = int(n)
+metrics["n_distress"] = int(df["Financial distress"].sum())
+metrics["distress_rate"] = float(df["Financial distress"].mean())
+
+# ----------------------------------------------------------------------------
 # TASK A : CLUSTERING  (scipy.cluster.vq)
 # ----------------------------------------------------------------------------
 FIN_FEATS = ["Sales Revenue", "Employees", "Net income", "Operating Income",
