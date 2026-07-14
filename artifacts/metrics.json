@@ -173,26 +173,47 @@
     "Employees",
     "Net income",
     "Operating Income",
-    "Total financial expenses",
-    "Operating cash flow",
-    "Current taxes",
-    "Alert Index"
+    "Total financial expenses"
   ],
   "classification": {
     "model": "Logistic Regression (L2, class-weighted)",
-    "cv_roc_auc_mean": 0.8524805044603967,
-    "cv_roc_auc_std": 0.016013572587191202,
-    "train_roc_auc": 0.8557131388613142
+    "cv_roc_auc_mean": 0.8525571640502541,
+    "cv_roc_auc_std": 0.01634304221822684,
+    "train_roc_auc": 0.8558203971103606
   },
   "feature_importance": {
-    "Operating Income": 0.6619449504769045,
-    "Net income": 0.3283909528429348,
-    "Total financial expenses": 0.3179727969446331,
-    "Operating cash flow": 0.19425306156560757,
-    "Sales Revenue": 0.16726907585768538,
-    "Current taxes": 0.15126419013132042,
-    "Employees": 0.14242282071021975,
-    "Alert Index": 0.05102783669666573
+    "Operating Income": 0.7484771413766843,
+    "Net income": 0.4437163854082813,
+    "Total financial expenses": 0.308518068481811,
+    "Sales Revenue": 0.20160487014024908,
+    "Employees": 0.1296068191573716
+  },
+  "wald": {
+    "Sales Revenue": {
+      "coef": -0.20160487036233884,
+      "z": -2.453546080143896,
+      "p_value": 0.014145541449174681
+    },
+    "Employees": {
+      "coef": 0.12960681936706406,
+      "z": 1.8617474408957067,
+      "p_value": 0.06263869811638179
+    },
+    "Net income": {
+      "coef": -0.4437163856124224,
+      "z": -3.4233358834635226,
+      "p_value": 0.0006185759162153914
+    },
+    "Operating Income": {
+      "coef": -0.7484771417475148,
+      "z": -7.313305812082594,
+      "p_value": 2.6068036618198676e-13
+    },
+    "Total financial expenses": {
+      "coef": 0.30851806866848064,
+      "z": 4.192108961012377,
+      "p_value": 2.763731918964396e-05
+    }
   },
   "demo_pred_pos_rate": 0.0,
   "demo_accuracy": 0.8915723451805926

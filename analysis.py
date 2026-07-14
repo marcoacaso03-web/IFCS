@@ -305,10 +305,15 @@ metrics["multicollinearity"] = {
              "'Tax shield' is mechanically derived from 'Total financial expenses' (r=0.80). "
              "Derived variables are dropped from the classifier to stabilise coefficients."),
 }
-# Cleaned predictor set: drop redundant derived variables
+# Cleaned predictor set: drop derived/redundant/non-significant variables.
+# Removed: Maximum deductible amount (VIF 204, derived from Op Income),
+#          Tax shield (derived from Total financial expenses, r=0.80),
+#          Alert Index (= Net income / Total financial expenses, r=0.95),
+#          Current taxes (collinear with Operating Income, r=0.87),
+#          Operating cash flow (Wald p=0.55, non-significant once Op/Net income are in).
+# Kept 5 non-derived, significant predictors (CV AUC highest at 0.846).
 PRED_FEATS = ["Sales Revenue", "Employees", "Net income", "Operating Income",
-              "Total financial expenses", "Operating cash flow", "Current taxes",
-              "Alert Index"]
+              "Total financial expenses"]
 metrics["pred_feats_used"] = PRED_FEATS
 
 # ----------------------------------------------------------------------------
@@ -393,6 +398,20 @@ importances = np.abs(beta[1:]) * Xb.std(0)  # standardized |coef|
 imp = pd.Series(importances, index=PRED_FEATS).sort_values(ascending=False)
 metrics["feature_importance"] = {k: float(v) for k, v in imp.items()}
 
+# Wald test (significance) on the final model
+from numpy.linalg import inv as _invw
+from scipy.stats import norm as _norm
+_p = 1.0 / (1.0 + np.exp(-(Xb_aug @ beta)))
+_H = Xb_aug.T * (_p * (1 - _p)) @ Xb_aug
+_cov = _invw(_H)
+_se = np.sqrt(np.diag(_cov))
+_z = beta / _se
+_pval = 2 * (1 - _norm.cdf(np.abs(_z)))
+metrics["wald"] = {PRED_FEATS[i]: {"coef": float(beta[i + 1]),
+                                   "z": float(_z[i + 1]),
+                                   "p_value": float(_pval[i + 1])}
+                   for i in range(len(PRED_FEATS))}
+
 plt.figure(figsize=(6, 3.4))
 imp.iloc[::-1].plot(kind="barh", color="#4C72B0")
 plt.title(f"LogReg standardized |coef| (CV AUC={np.mean(cv_aucs):.3f})")
@@ -431,8 +450,7 @@ LOG_FEATS = ["Sales Revenue", "Employees", "Net income", "Operating Income",
              "Maximum deductible amount", "Total financial expenses", "Tax shield",
              "Operating cash flow", "Current taxes"]
 FEATS = ["Sales Revenue", "Employees", "Net income", "Operating Income",
-         "Total financial expenses", "Operating cash flow", "Current taxes",
-         "Alert Index"]  # derived/redundant vars dropped for coefficient stability
+         "Total financial expenses"]  # 5 non-derived, significant predictors
 
 def prep(d):
     d = d.copy()
