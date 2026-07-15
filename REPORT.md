@@ -110,15 +110,21 @@ La silhouette è massima a **k = 2** (i dati sono un continuum), ma per uno scav
 | CV ROC-AUC (std) | 0,008 |
 | Train ROC-AUC | 0,856 |
 
-*Nota:* lo stesso AUC (0,852) si otteneva anche con le 10 variabili — le due rimosse erano quindi puramente ridondanti, e ora i coefficienti non sono più distorti dalla collinearità.
+*Nota:* lo stesso AUC (0,852) si otteneva anche con le 10 variabili — le variabili rimosse erano quindi puramente ridondanti, e ora i coefficienti non sono più distorti dalla collinearità.
 
-**Driver principali** (|coefficiente| standardizzato, set pulito):
-1. `Operating Income` (0,66) — redditività operativa è il segnale dominante;
-2. `Net income` (0,33);
-3. `Total financial expenses` (0,32) — onere del debito;
-4. `Operating cash flow` (0,19).
+**Confronto modelli (Task B).** Poiché `scikit-learn`/`xgboost` non installano su questo Termux, i tre modelli sono implementati in modo trasparente: Logistic Regression via `scipy.optimize`, Random Forest e GBM (gradient boosting) scritti a mano in numpy (CART + bootstrap + line-search). Valutati con **5-fold stratified CV** e **holdout 80/20**, soglia 0,5, metriche Precision/Recall/**F1**/**F2** (+ ROC-AUC). F2 pesa il recall ×2 — appropriato perché in un early-warning il costo di un falso negativo (impresa in difficoltà non rilevata) è alto.
 
-Il modello cattura quindi il distress guardando a redditività operativa, utili e peso degli oneri finanziari — coerente con l'interpretazione dei cluster (il cluster 4 ha proprio questi indicatori negativi).
+| Modello | CV P | CV R | CV F1 | CV F2 | CV AUC | HO F2 | HO AUC |
+|---|---|---|---|---|---|---|---|
+| **Logistic Regression** (scipy) | 0,304 | **0,719** | 0,427 | **0,564** | 0,857 | **0,567** | 0,858 |
+| Random Forest (numpy) | **0,573** | 0,371 | **0,449** | 0,398 | **0,860** | 0,363 | 0,860 |
+| GBM / XGBoost-like (numpy) | 0,590 | 0,169 | 0,262 | 0,197 | 0,854 | 0,168 | 0,853 |
+
+**Scelta:** **Logistic Regression** — pur avendo la precision più bassa (0,30, inevitabile col 10,8% di base e il trade-off recall/precision), è quella con **F2 più alto (0,564)** e AUC sostanzialmente identica agli alberi (0,857 vs 0,860). Per un sistema di allarme precoce è la scelta giusta: meglio intercettare più casi reali. Gli alberi (RF/GBM) eccellono in precisione ma sacrificano troppo il recall.
+
+**Driver principali** (|coefficiente| standardizzato, Wald, 4-feature set): `Operating Income` (0,79), `Net income` (0,44), `Total financial expenses` (0,34), `Sales Revenue per Employee` (0,25) — tutti p<0,001.
+
+Il modello cattura il distress guardando a redditività operativa, utili, oneri finanziari e produttività del lavoro — coerente con l'interpretazione dei cluster (il cluster 4 ha proprio questi indicatori negativi).
 
 **Consegna.** `predictions.csv` con colonne `Company ID`, `pred_class` (TRUE/FALSE) — formato richiesto.
 
@@ -141,12 +147,14 @@ ri-addestra sul `train.csv` completo e produce le predizioni reali sul test, con
 | File | Contenuto |
 |---|---|
 | `analysis.py` | Pipeline completa (clustering + classificazione + figure), solo numpy/scipy. |
+| `model_comparison.py` | Confronto LogReg / RF / GBM (numpy) con k-fold + holdout e P/R/F1/F2/AUC. |
 | `make_slides.py` | Genera la slide deck `.pptx` (stdlib, no python-pptx). |
 | `score_model.py` | Scorer riusabile per il test set ufficiale. |
 | `artifacts/clusters.csv` | Company ID, cluster, region, macro. |
 | `artifacts/predictions.csv` | Company ID, pred_class (dimostrative). |
-| `artifacts/metrics.json` | Tutti i numeri. |
+| `artifacts/metrics.json` | Tutti i numeri (cleaning, VIF, Wald, clustering). |
+| `artifacts/model_comparison.json` | Metriche di confronto modelli. |
 | `artifacts/fig_*.png` | 5 figure (silhouette, profili, geo, distress, importanza). |
-| `artifacts/IFCS_2026_presentation.pptx` | Slide deck 5 min (8 slide). |
+| `artifacts/IFCS_2026_presentation.pptx` | Slide deck 5 min (9 slide). |
 
 **Ambiente.** Eseguito con Python 3.14 di sistema (numpy/pandas/scipy/matplotlib da `pkg`). Nessuna dipendenza da `scikit-learn`/`python-pptx`, che non compilano su questo Termux.

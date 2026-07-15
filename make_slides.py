@@ -123,12 +123,11 @@ SLIDES.append({
 SLIDES.append({
     "type": "content", "title": "Task B - Predicting Distress",
     "bullets": [
-        ("Model.", "Logistic Regression (L2, class-weighted) - robust baseline for early warning."),
-        ("Features.", "4 significant non-derived vars (Wald all p<0.001): OpInc, NetInc, TotFinExp, productivity."),
-        ("Validation.", f"5-fold stratified CV, ROC-AUC = {cls.get('cv_roc_auc_mean',0):.3f} (+/- {cls.get('cv_roc_auc_std',0):.3f})."),
-        ("Train AUC.", f"{cls.get('train_roc_auc',0):.3f}."),
+        ("Models compared.", "LogReg (scipy), Random Forest & GBM (numpy) - sklearn/xgb unavailable."),
+        ("Eval.", "5-fold CV + 80/20 holdout; Precision, Recall, F1, F2, ROC-AUC."),
+        ("Winner.", "Logistic Regression: highest F2 (0.564), AUC 0.857 ~ trees; recall 0.72."),
+        ("Why.", "F2 weights recall x2 - catching distressed firms matters most (false negative = costly)."),
         ("Deliverable.", "predictions.csv: Company ID + pred_class (TRUE/FALSE)."),
-        ("Top drivers.", top_feats + "."),
     ],
     "image": ("imp", 7.0, 1.5, 6.0),
 })
